@@ -40,7 +40,6 @@ from transformers import BertConfig, BertModel, PreTrainedTokenizerFast  # noqa:
 
 from promptone import load  # noqa: E402
 from promptone.common import DecisionModel  # noqa: E402
-from promptone.router import Router  # noqa: E402
 
 PASS, FAIL = [], []
 

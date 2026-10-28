@@ -19,7 +19,6 @@ appear in any response.
 
 Run: python tests/test_example_server_errors.py
 """
-import json
 import logging
 import os
 import sys

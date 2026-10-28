@@ -7,7 +7,6 @@ directory, and `common.build_model`'s training-time base encoder).
 Run: python tests/test_download.py
 """
 import inspect
-import inspect
 import json
 import os
 import re

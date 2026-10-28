@@ -9,7 +9,6 @@ Run: python tests/test_kaggle_ddp_convergence.py
 """
 import json
 import os
-import random
 import sys
 import unittest
 from pathlib import Path
@@ -20,7 +19,6 @@ os.environ.setdefault("HF_HUB_OFFLINE", "1")
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 import numpy as np  # noqa: E402
-import torch  # noqa: E402
 
 from promptone.calibrate import fit_temperature_map  # noqa: E402
 from promptone.common import TEMP_MAX, TEMP_MIN, collate_items  # noqa: E402

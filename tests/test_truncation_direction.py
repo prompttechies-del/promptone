@@ -7,13 +7,11 @@ list that means the newest turn is silently lost. For list-shaped state the agen
 now truncates from the left so the most recent intent survives. Strings and
 dicts are unaffected (backward compatible).
 """
-import json
-
 import torch
 from transformers import AutoConfig, AutoModel
 
 from promptone.agent import Agent
-from promptone.common import DecisionModel, build_sequence, serialize_state
+from promptone.common import DecisionModel, build_sequence
 
 
 class _FakeTok:

@@ -4100,7 +4100,6 @@ def test_ts_sdk_health_claim_drops_the_three_key_version():
 
 # `re` is not imported at the top of this file; import here so the helper above can use it
 # without changing the module's existing import order.
-import re  # noqa: E402
 def test_jev_strict_projection_page_names_the_projected_keys():
     """docs/http-api.md's four strict bullets must be the key sets `_project_jev_strict` returns.
 

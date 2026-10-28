@@ -682,8 +682,6 @@ check(
     boundary_bins["noul:2"]["values"][18],
 )
 
-from promptone.onnx_agent import ONNXAgent  # noqa: E402
-
 onnx_boundary = ONNXAgent.__new__(ONNXAgent)
 onnx_boundary.temperature = [1.0, 1.0, 1.0]
 onnx_boundary.temperature_by_options = {}

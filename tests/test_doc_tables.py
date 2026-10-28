@@ -22,7 +22,7 @@ import json
 import os
 import re
 import sys
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Tuple
 
 PASS: List[str] = []
 FAIL: List[str] = []

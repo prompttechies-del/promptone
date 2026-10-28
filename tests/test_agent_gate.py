@@ -17,7 +17,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 
 try:
-    import torch
+    import torch  # noqa: F401
 except ImportError:
     t = types.ModuleType("torch")
     # promptone/common.py annotates `proper_reward` with both at module scope, so importing

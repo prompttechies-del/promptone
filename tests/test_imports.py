@@ -1,7 +1,5 @@
 """Test that all __all__ symbols are actually importable."""
 
-import sys
-
 
 def test_all_exports_exist():
     """Every name in __all__ must be importable from promptone.

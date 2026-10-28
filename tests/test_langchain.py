@@ -1299,7 +1299,6 @@ finally:
 
 # --------------------------------------------------------------- 7. Prediction hooks
 from promptone.integrations import langchain as langchain_module  # noqa: E402
-from promptone.hooks import PredictContext  # noqa: E402
 
 
 class HookAgent:
