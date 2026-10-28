@@ -1,0 +1,15 @@
+[package]
+name = "promptone-benchmark"
+version = "0.1.0"
+edition = "2024"
+description = "Benchmarks the PromptOne Rust SDK across one checkpoint."
+license = "Apache-2.0"
+publish = false
+
+[[bin]]
+name = "promptone-benchmark"
+path = "src/main.rs"
+
+[dependencies]
+promptone = { package = "promptone-onnx", path = "../.." }
+serde_json = "1"

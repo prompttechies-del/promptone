@@ -1,0 +1,46 @@
+# DGX Spark is Linux ARM64 with NVIDIA CUDA 13.0, not Apple MPS or Jetson.
+# Use instead of compose.cuda.yaml, with compose.yaml for the SDK quickstart and
+# with compose.http.yaml as well for the HTTP server:
+#   docker compose -f compose.yaml -f compose.spark.yaml run --build --rm promptone
+#   docker compose -f compose.yaml -f compose.http.yaml -f compose.spark.yaml up --build promptone-serve
+# `promptone-serve` repeats the settings because it is a separate service; overrides
+# for `promptone` never reach it.
+services:
+  promptone:
+    platform: linux/arm64
+    build:
+      args:
+        TORCH_INDEX: "${PROMPTONE_TORCH_INDEX:-cu130}"
+    environment:
+      PROMPTONE_DEVICE: "${PROMPTONE_DEVICE:-cuda}"
+      # Autocast dtype the runtime reads; empty keeps the checkpoint's own `amp_dtype`. Both
+      # services need it, because an override on `promptone` never reaches `promptone-serve`.
+      PROMPTONE_CUDA_AMP: "${PROMPTONE_CUDA_AMP:-}"
+      PROMPTONE_CPU_AMP: "${PROMPTONE_CPU_AMP:-}"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ["${PROMPTONE_GPU_ID:-0}"]
+              capabilities: [gpu]
+
+  promptone-serve:
+    platform: linux/arm64
+    build:
+      context: .
+      args:
+        TORCH_INDEX: "${PROMPTONE_TORCH_INDEX:-cu130}"
+    environment:
+      PROMPTONE_DEVICE: "${PROMPTONE_DEVICE:-cuda}"
+      # Autocast dtype the runtime reads; empty keeps the checkpoint's own `amp_dtype`. Both
+      # services need it, because an override on `promptone` never reaches `promptone-serve`.
+      PROMPTONE_CUDA_AMP: "${PROMPTONE_CUDA_AMP:-}"
+      PROMPTONE_CPU_AMP: "${PROMPTONE_CPU_AMP:-}"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ["${PROMPTONE_GPU_ID:-0}"]
+              capabilities: [gpu]

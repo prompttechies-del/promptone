@@ -1,0 +1,36 @@
+services:
+  promptone:
+    build:
+      context: .
+      args:
+        TORCH_INDEX: "${PROMPTONE_TORCH_INDEX:-cpu}"
+        TORCH_VERSION: "${PROMPTONE_TORCH_VERSION:-2.14.0}"
+    environment:
+      PROMPTONE_DEVICE: "${PROMPTONE_DEVICE:-cpu}"
+      # The autocast dtype the runtime picks when it builds the model on the selected device
+      # (`promptone/agent.py`). An empty value means "use the checkpoint's own `amp_dtype`", which is
+      # what these images have always served. README's threshold section measures what fp16 vs
+      # bf16 decides differently.
+      PROMPTONE_CUDA_AMP: "${PROMPTONE_CUDA_AMP:-}"
+      PROMPTONE_CPU_AMP: "${PROMPTONE_CPU_AMP:-}"
+      PROMPTONE_MODEL: "${PROMPTONE_MODEL:-auto}"
+      PROMPTONE_MODEL_PATH: "${PROMPTONE_MODEL_PATH:-}"
+      PROMPTONE_REQUEST_FILE: "${PROMPTONE_REQUEST_FILE:-/opt/promptone/examples/request.json}"
+      # The supply-chain pair: PROMPTONE_REVISION says which Hub commit a checkpoint download resolves to
+      # (a commit, branch, tag, or `reviewed` for the reviewed SHAs in `promptone/revisions.py`) and
+      # PROMPTONE_SHA256_DIGESTS verifies the artifact that arrives (`docs/security.md`). This service
+      # builds its Router with no `revision=` or `sha256_digests=` argument
+      # (`examples/docker/quickstart.py`), so these variables are the only way to pin from Compose.
+      PROMPTONE_REVISION: "${PROMPTONE_REVISION:-}"
+      PROMPTONE_SHA256_DIGESTS: "${PROMPTONE_SHA256_DIGESTS:-}"
+      HF_HUB_OFFLINE: "${HF_HUB_OFFLINE:-0}"
+      HF_TOKEN: "${HF_TOKEN:-}"
+      HF_TOKEN_FILE: "${HF_TOKEN_FILE:-}"
+      OMP_NUM_THREADS: "${OMP_NUM_THREADS:-4}"
+    volumes:
+      - model-cache:/home/promptone/.cache/huggingface
+    init: true
+
+volumes:
+  model-cache:
+    name: "${PROMPTONE_CACHE_VOLUME:-${COMPOSE_PROJECT_NAME}_model-cache}"

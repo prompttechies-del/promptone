@@ -1,0 +1,44 @@
+# Use with compose.yaml, and with compose.http.yaml when serving over HTTP. The
+# `promptone-serve` entry repeats the CUDA build args and device reservation because it is
+# a separate service: overrides for `promptone` never reach it, so it would serve on CPU.
+services:
+  promptone:
+    build:
+      args:
+        # cu130, not cu128: compose.yaml pins TORCH_VERSION 2.14.0 and the cu128 index has no
+        # 2.14.0 wheel (its newest is 2.11.0), so the documented CUDA path could not resolve its
+        # own pin (#971). cu126 also carries 2.14.0; cu130 is chosen because docker.yml already
+        # builds the CUDA images with it, so Compose and CI now agree.
+        TORCH_INDEX: "${PROMPTONE_TORCH_INDEX:-cu130}"
+    environment:
+      PROMPTONE_DEVICE: "${PROMPTONE_DEVICE:-cuda}"
+      # The runtime reads these when it picks the autocast dtype; empty keeps the checkpoint's
+      # own `amp_dtype`. README's threshold section measures what fp16 vs bf16 decides differently.
+      PROMPTONE_CUDA_AMP: "${PROMPTONE_CUDA_AMP:-}"
+      PROMPTONE_CPU_AMP: "${PROMPTONE_CPU_AMP:-}"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ["${PROMPTONE_GPU_ID:-0}"]
+              capabilities: [gpu]
+
+  promptone-serve:
+    build:
+      context: .
+      args:
+        TORCH_INDEX: "${PROMPTONE_TORCH_INDEX:-cu130}"
+    environment:
+      PROMPTONE_DEVICE: "${PROMPTONE_DEVICE:-cuda}"
+      # The runtime reads these when it picks the autocast dtype; empty keeps the checkpoint's
+      # own `amp_dtype`. README's threshold section measures what fp16 vs bf16 decides differently.
+      PROMPTONE_CUDA_AMP: "${PROMPTONE_CUDA_AMP:-}"
+      PROMPTONE_CPU_AMP: "${PROMPTONE_CPU_AMP:-}"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ["${PROMPTONE_GPU_ID:-0}"]
+              capabilities: [gpu]
