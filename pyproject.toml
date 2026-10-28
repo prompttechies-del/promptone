@@ -96,7 +96,7 @@ crewai = [
 
 # `pip install promptone[agno]` adds the Agno multi-agent team routing and guardrail integration (promptone.integrations).
 agno = [
-    "agno>=1.1.14,<2",
+    "agno>=1.1.14,<4",
 ]
 
 [project.scripts]
