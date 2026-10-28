@@ -93,7 +93,7 @@ const SCRIPT_RANGES: &[(&str, &[(u32, u32)])] = &[
     ("tamil", &[(0x0B80, 0x0BFF)]),
     ("telugu", &[(0x0C00, 0x0C7F)]),
     ("kannada", &[(0x0C80, 0x0CFF)]),
-    ("mapromptonelam", &[(0x0D00, 0x0D7F)]),
+    ("malayalam", &[(0x0D00, 0x0D7F)]),
     ("sinhala", &[(0x0D80, 0x0DFF)]),
     ("thai", &[(0x0E00, 0x0E7F)]),
     ("lao", &[(0x0E80, 0x0EFF)]),

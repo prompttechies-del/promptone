@@ -123,7 +123,7 @@ def run_cell(text: str, extra: Optional[Dict[str, Any]] = None) -> Any:
 AGENT_PY = os.path.join("promptone", "agent.py")
 ONNX_PY = os.path.join("promptone", "onnx_agent.py")
 EXAMPLE03 = os.path.join("examples", "03_reading_the_result.py")
-README = "README.md"
+README = "docs/guide.md"
 
 
 def _own_nodes(func: ast.AST) -> List[ast.AST]:

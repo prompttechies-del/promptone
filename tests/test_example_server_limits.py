@@ -928,7 +928,7 @@ def main():
 
     # The section of the README that teaches this server has to say the field exists and where its
     # spellings come from, or the only way to learn it is to get a 422.
-    with open(os.path.join(ROOT, "README.md"), encoding="utf-8") as handle:
+    with open(os.path.join(ROOT, "docs/guide.md"), encoding="utf-8") as handle:
         readme = handle.read()
     demo_page = readme.split("## Try it locally: web GUI + JSON API", 1)[1].split("\n---", 1)[0]
     ok("the README section for this server teaches `model` and where its names come from",

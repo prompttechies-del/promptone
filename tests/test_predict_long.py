@@ -735,7 +735,7 @@ check("total/0 separates a hook answer from a single-window one",
 
 # 11. the page that teaches this key teaches the value the code actually writes
 README = open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-                           "README.md"), encoding="utf-8").read()
+                           "docs", "guide.md"), encoding="utf-8").read()
 bullet = README[README.index("A state that already fits one window"):][:600]
 check("docs/README pins the single-window value", 'usage["windows"] = 1' in bullet, True)
 check("docs/README states the key is total", "The key is total" in bullet, True)

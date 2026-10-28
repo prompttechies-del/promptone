@@ -14,7 +14,7 @@ const SCRIPT_RANGES: ScriptRanges = [
   ["tamil", [[0x0b80, 0x0bff]]],
   ["telugu", [[0x0c00, 0x0c7f]]],
   ["kannada", [[0x0c80, 0x0cff]]],
-  ["mapromptonelam", [[0x0d00, 0x0d7f]]],
+  ["malayalam", [[0x0d00, 0x0d7f]]],
   ["sinhala", [[0x0d80, 0x0dff]]],
   ["thai", [[0x0e00, 0x0e7f]]],
   ["lao", [[0x0e80, 0x0eff]]],

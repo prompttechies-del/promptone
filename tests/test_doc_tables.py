@@ -260,9 +260,9 @@ def main() -> int:
         # MASSIVE rows are labelled only "English" and "13 other languages"; the section
         # heading supplies the family there, and no other table shares these headers.
         HEADLINE_TABLES = [
-            ("README.md", "| Benchmark / Task | English (`promptone`) | Multilingual (`promptone-multilingual`) | `Router` (Routed) |",
+            ("docs/guide.md", "| Benchmark / Task | English (`promptone`) | Multilingual (`promptone-multilingual`) | `Router` (Routed) |",
              (1, 2), None, 4),
-            ("README.md", "| | `promptone` | `promptone-multilingual` |", (1, 2), "massive_intent", 4),
+            ("docs/guide.md", "| | `promptone` | `promptone-multilingual` |", (1, 2), "massive_intent", 4),
             ("BENCHMARKS.md", "| task | promptone | promptone-multilingual |", (1, 2), None, 6),
         ]
         cells_checked = 0
@@ -296,7 +296,7 @@ def main() -> int:
         total = {m: sum(s[m]["calibrated"]["n"] for s in t4_suites.values()) for m in T4_MODELS}
         check_true("headline/both checkpoints answered identical question counts",
                    total["promptone"] == total["promptone-multilingual"], total)
-        stated_total = re.search(r"\(([\d,]+) questions, one T4 GPU", read("README.md"))
+        stated_total = re.search(r"\(([\d,]+) questions, one T4 GPU", read("docs/guide.md"))
         check_true("headline/README states a question denominator", stated_total is not None,
                    "the '(N questions, one T4 GPU)' caption moved")
         if stated_total:

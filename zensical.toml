@@ -15,8 +15,8 @@ copyright = "Apache 2.0. Developed by Convai Innovations."
 
 [project.theme]
 # Reuse the README logo to avoid maintaining a second copy.
-logo = "https://raw.githubusercontent.com/prompttechies-del/promptone/main/assets/logo-mark.svg"
-favicon = "https://raw.githubusercontent.com/prompttechies-del/promptone/main/assets/logo-mark.svg"
+logo = "https://raw.githubusercontent.com/prompttechies-del/promptone/main/assets/promptone-logo.webp"
+favicon = "https://raw.githubusercontent.com/prompttechies-del/promptone/main/assets/promptone-logo.webp"
 features = [
   "content.code.copy",
   "navigation.footer",

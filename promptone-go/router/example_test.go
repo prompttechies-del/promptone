@@ -66,7 +66,7 @@ func ExampleNormaliseName() {
 	fmt.Println(err)
 	// Output:
 	// typed-decisions
-	// unknown model 'gpt'; choose one of ['english', 'multilingual', 'typed-decisions'] (or an alias: ['decisions', 'default', 'en', 'promptone', 'promptone-multilingual', 'promptone-typed-decisions', 'ml', 'multi', 'typed', 'typed_decisions'])
+	// unknown model 'gpt'; choose one of ['english', 'multilingual', 'typed-decisions'] (or an alias: ['decisions', 'default', 'en', 'ml', 'multi', 'promptone', 'promptone-multilingual', 'promptone-typed-decisions', 'typed', 'typed_decisions'])
 }
 
 func ExampleRouter_AddHook() {

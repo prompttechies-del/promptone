@@ -92,10 +92,10 @@
       "ok": "typed-decisions"
     },
     "": {
-      "error": "unknown model ''; choose one of ['english', 'multilingual', 'typed-decisions'] (or an alias: ['decisions', 'default', 'en', 'promptone', 'promptone-multilingual', 'promptone-typed-decisions', 'ml', 'multi', 'typed', 'typed_decisions'])"
+      "error": "unknown model ''; choose one of ['english', 'multilingual', 'typed-decisions'] (or an alias: ['decisions', 'default', 'en', 'ml', 'multi', 'promptone', 'promptone-multilingual', 'promptone-typed-decisions', 'typed', 'typed_decisions'])"
     },
     "  ": {
-      "error": "unknown model '  '; choose one of ['english', 'multilingual', 'typed-decisions'] (or an alias: ['decisions', 'default', 'en', 'promptone', 'promptone-multilingual', 'promptone-typed-decisions', 'ml', 'multi', 'typed', 'typed_decisions'])"
+      "error": "unknown model '  '; choose one of ['english', 'multilingual', 'typed-decisions'] (or an alias: ['decisions', 'default', 'en', 'ml', 'multi', 'promptone', 'promptone-multilingual', 'promptone-typed-decisions', 'typed', 'typed_decisions'])"
     },
     "ENGLISH": {
       "ok": "english"
@@ -107,19 +107,19 @@
       "ok": "english"
     },
     "nope": {
-      "error": "unknown model 'nope'; choose one of ['english', 'multilingual', 'typed-decisions'] (or an alias: ['decisions', 'default', 'en', 'promptone', 'promptone-multilingual', 'promptone-typed-decisions', 'ml', 'multi', 'typed', 'typed_decisions'])"
+      "error": "unknown model 'nope'; choose one of ['english', 'multilingual', 'typed-decisions'] (or an alias: ['decisions', 'default', 'en', 'ml', 'multi', 'promptone', 'promptone-multilingual', 'promptone-typed-decisions', 'typed', 'typed_decisions'])"
     },
     "promptone-x": {
-      "error": "unknown model 'promptone-x'; choose one of ['english', 'multilingual', 'typed-decisions'] (or an alias: ['decisions', 'default', 'en', 'promptone', 'promptone-multilingual', 'promptone-typed-decisions', 'ml', 'multi', 'typed', 'typed_decisions'])"
+      "error": "unknown model 'promptone-x'; choose one of ['english', 'multilingual', 'typed-decisions'] (or an alias: ['decisions', 'default', 'en', 'ml', 'multi', 'promptone', 'promptone-multilingual', 'promptone-typed-decisions', 'typed', 'typed_decisions'])"
     },
     "en-US": {
-      "error": "unknown model 'en-US'; choose one of ['english', 'multilingual', 'typed-decisions'] (or an alias: ['decisions', 'default', 'en', 'promptone', 'promptone-multilingual', 'promptone-typed-decisions', 'ml', 'multi', 'typed', 'typed_decisions'])"
+      "error": "unknown model 'en-US'; choose one of ['english', 'multilingual', 'typed-decisions'] (or an alias: ['decisions', 'default', 'en', 'ml', 'multi', 'promptone', 'promptone-multilingual', 'promptone-typed-decisions', 'typed', 'typed_decisions'])"
     },
     "typed decisions": {
-      "error": "unknown model 'typed decisions'; choose one of ['english', 'multilingual', 'typed-decisions'] (or an alias: ['decisions', 'default', 'en', 'promptone', 'promptone-multilingual', 'promptone-typed-decisions', 'ml', 'multi', 'typed', 'typed_decisions'])"
+      "error": "unknown model 'typed decisions'; choose one of ['english', 'multilingual', 'typed-decisions'] (or an alias: ['decisions', 'default', 'en', 'ml', 'multi', 'promptone', 'promptone-multilingual', 'promptone-typed-decisions', 'typed', 'typed_decisions'])"
     },
     "multilingual2": {
-      "error": "unknown model 'multilingual2'; choose one of ['english', 'multilingual', 'typed-decisions'] (or an alias: ['decisions', 'default', 'en', 'promptone', 'promptone-multilingual', 'promptone-typed-decisions', 'ml', 'multi', 'typed', 'typed_decisions'])"
+      "error": "unknown model 'multilingual2'; choose one of ['english', 'multilingual', 'typed-decisions'] (or an alias: ['decisions', 'default', 'en', 'ml', 'multi', 'promptone', 'promptone-multilingual', 'promptone-typed-decisions', 'typed', 'typed_decisions'])"
     },
     " english": {
       "ok": "english"

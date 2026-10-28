@@ -159,7 +159,7 @@ LANG_STATES = [
     ("all_scripts/tamil", "நீங்கள் எப்படி இருக்கிறீர்கள்"),
     ("all_scripts/telugu", "మీరు ఎలా ఉన్నారు, నేను బాగున్నాను"),
     ("all_scripts/kannada", "ನೀವು ಹೇಗಿದ್ದೀರಿ, ನಾನು ಚೆನ್ನಾಗಿದ್ದೇನೆ"),
-    ("all_scripts/mapromptonelam", "നിങ്ങൾക്ക് സുഖമാണോ, എനിക്ക് സുഖമാണ്"),
+    ("all_scripts/malayalam", "നിങ്ങൾക്ക് സുഖമാണോ, എനിക്ക് സുഖമാണ്"),
     ("all_scripts/sinhala", "ඔබට කොහොමද, මට හොඳින්"),
     ("all_scripts/thai", "คุณเป็นอย่างไรบ้างวันนี้"),
     ("all_scripts/lao", "ສະບາຍດີ ທ່ານເປັນແນວໃດແດ່"),

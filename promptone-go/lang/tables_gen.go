@@ -19,7 +19,7 @@ const (
 	ScriptTamil      Script = "tamil"
 	ScriptTelugu     Script = "telugu"
 	ScriptKannada    Script = "kannada"
-	ScriptMapromptonelam  Script = "mapromptonelam"
+	ScriptMalayalam  Script = "malayalam"
 	ScriptSinhala    Script = "sinhala"
 	ScriptThai       Script = "thai"
 	ScriptLao        Script = "lao"
@@ -34,7 +34,7 @@ const (
 )
 
 // scriptNames indexes those scripts by their position in lang.py's table.
-var scriptNames = [...]Script{ScriptGreek, ScriptCyrillic, ScriptArmenian, ScriptHebrew, ScriptArabic, ScriptDevanagari, ScriptBengali, ScriptGurmukhi, ScriptGujarati, ScriptOriya, ScriptTamil, ScriptTelugu, ScriptKannada, ScriptMapromptonelam, ScriptSinhala, ScriptThai, ScriptLao, ScriptTibetan, ScriptMyanmar, ScriptGeorgian, ScriptEthiopic, ScriptKhmer, ScriptHangul, ScriptKana, ScriptHan}
+var scriptNames = [...]Script{ScriptGreek, ScriptCyrillic, ScriptArmenian, ScriptHebrew, ScriptArabic, ScriptDevanagari, ScriptBengali, ScriptGurmukhi, ScriptGujarati, ScriptOriya, ScriptTamil, ScriptTelugu, ScriptKannada, ScriptMalayalam, ScriptSinhala, ScriptThai, ScriptLao, ScriptTibetan, ScriptMyanmar, ScriptGeorgian, ScriptEthiopic, ScriptKhmer, ScriptHangul, ScriptKana, ScriptHan}
 
 // scriptLookup is every script range sorted by code point, as inclusive lo, hi
 // pairs; scriptLookupIndex names the script each pair belongs to. They replace

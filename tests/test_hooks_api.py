@@ -1578,7 +1578,7 @@ finally:
 # route_batch fires only on_route and has no predict events to bind convenience callables
 # to, so its signature carries neither on_predict_start nor on_predict_end. Both take
 # hooks_timeout, which the pre-fix bullet did not mention.
-_readme_md = os.path.join(REPO, "README.md")
+_readme_md = os.path.join(REPO, "docs/guide.md")
 with open(_readme_md, encoding="utf-8") as _rmf:
     _readme_text = _rmf.read()
 

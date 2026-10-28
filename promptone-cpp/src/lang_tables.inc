@@ -2,7 +2,7 @@
 //
 // Regenerate with: python promptone-go/scripts/gen_tables.py --lang cpp
 
-inline constexpr const char* k_script_names[] = {"greek", "cyrillic", "armenian", "hebrew", "arabic", "devanagari", "bengali", "gurmukhi", "gujarati", "oriya", "tamil", "telugu", "kannada", "mapromptonelam", "sinhala", "thai", "lao", "tibetan", "myanmar", "georgian", "ethiopic", "khmer", "hangul", "kana", "han"};
+inline constexpr const char* k_script_names[] = {"greek", "cyrillic", "armenian", "hebrew", "arabic", "devanagari", "bengali", "gurmukhi", "gujarati", "oriya", "tamil", "telugu", "kannada", "malayalam", "sinhala", "thai", "lao", "tibetan", "myanmar", "georgian", "ethiopic", "khmer", "hangul", "kana", "han"};
 
 inline constexpr uint32_t k_script_lookup[] = {
     880, 1023, 1024, 1327, 1328, 1423, 1424, 1535, 1536, 1791, 1872, 1919, 2208, 2303, 2304, 2431,

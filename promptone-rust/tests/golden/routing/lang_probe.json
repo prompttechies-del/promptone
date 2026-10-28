@@ -2911,12 +2911,12 @@
     }
   },
   {
-    "label": "all_scripts/mapromptonelam",
+    "label": "all_scripts/malayalam",
     "state": "നിങ്ങൾക്ക് സുഖമാണോ, എനിക്ക് സുഖമാണ്",
     "state_text": "നിങ്ങൾക്ക് സുഖമാണോ, എനിക്ക് സുഖമാണ്",
-    "detect_script": "mapromptonelam",
+    "detect_script": "malayalam",
     "script_profile": {
-      "mapromptonelam": 1.0
+      "malayalam": 1.0
     },
     "latin_profile": {
       "language": null,
@@ -2925,9 +2925,9 @@
       "looks_non_english": false
     },
     "analyse": {
-      "script": "mapromptonelam",
+      "script": "malayalam",
       "script_profile": {
-        "mapromptonelam": 1.0
+        "malayalam": 1.0
       },
       "language": null,
       "is_english": false,

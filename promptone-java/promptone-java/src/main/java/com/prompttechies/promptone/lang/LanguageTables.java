@@ -64,7 +64,7 @@ public final class LanguageTables {
             new Script("tamil", new int[] {2944, 3071}),
             new Script("telugu", new int[] {3072, 3199}),
             new Script("kannada", new int[] {3200, 3327}),
-            new Script("mapromptonelam", new int[] {3328, 3455}),
+            new Script("malayalam", new int[] {3328, 3455}),
             new Script("sinhala", new int[] {3456, 3583}),
             new Script("thai", new int[] {3584, 3711}),
             new Script("lao", new int[] {3712, 3839}),
@@ -113,7 +113,7 @@ public final class LanguageTables {
     /** The named scripts, in the order the reference declares them. */
     private static final String[] SCRIPT_NAMES = {
             "greek", "cyrillic", "armenian", "hebrew", "arabic", "devanagari", "bengali", "gurmukhi",
-            "gujarati", "oriya", "tamil", "telugu", "kannada", "mapromptonelam", "sinhala", "thai", "lao",
+            "gujarati", "oriya", "tamil", "telugu", "kannada", "malayalam", "sinhala", "thai", "lao",
             "tibetan", "myanmar", "georgian", "ethiopic", "khmer", "hangul", "kana", "han"
     };
 

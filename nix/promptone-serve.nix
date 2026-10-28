@@ -267,6 +267,24 @@ in
       '';
     };
 
+    ui = lib.mkOption {
+      type = lib.types.bool;
+      default = true;
+      description = ''
+        Serve the browser playground at /ui/ (sets `PROMPTONE_UI`). false turns it off.
+      '';
+    };
+
+    corsOrigins = lib.mkOption {
+      type = lib.types.listOf lib.types.str;
+      default = [ ];
+      example = [ "https://example.com" ];
+      description = ''
+        Origins allowed to call the server from a browser page (sets
+        `PROMPTONE_CORS_ORIGINS`). Empty leaves CORS off.
+      '';
+    };
+
     tournamentGroup = lib.mkOption {
       type = lib.types.nullOr (lib.types.ints.between 2 100);
       default = null;
@@ -411,6 +429,10 @@ in
         PROMPTONE_MAX_TOKEN_BUDGET = toString cfg.maxTokenBudget;
       } // lib.optionalAttrs (cfg.maxBatchTokens != null) {
         PROMPTONE_MAX_BATCH_TOKENS = toString cfg.maxBatchTokens;
+      } // lib.optionalAttrs (!cfg.ui) {
+        PROMPTONE_UI = "0";
+      } // lib.optionalAttrs (cfg.corsOrigins != [ ]) {
+        PROMPTONE_CORS_ORIGINS = lib.concatStringsSep "," cfg.corsOrigins;
       } // lib.optionalAttrs (cfg.tournamentGroup != null) {
         PROMPTONE_TOURNAMENT_GROUP = toString cfg.tournamentGroup;
       } // lib.optionalAttrs (cfg.revision != null) {
