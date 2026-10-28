@@ -3,7 +3,7 @@
     "benchmark": "zh_short_commands",
     "cases_file": "research/benchmarks/zh_short_commands/data/cases.jsonl",
     "cases_sha256": "2d789879fe11328fb8b8099aaf35ddf7b2e301b393f9525701368339da28181e",
-    "prompts_sha256": "d26c8357a302f887258382c5a40d1c1320adab8b3e86c364ef150a913a06686d",
+    "prompts_sha256": "4be7285cd183eb647fd3d9cf6f675155eba85081f258cccca1c640b3082ef815",
     "configs": [
       "choice_criteria",
       "choice_scenario",

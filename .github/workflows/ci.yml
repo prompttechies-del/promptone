@@ -313,10 +313,6 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          ref: 697d788e1c16e9cb7f736471897ab758a79c1df7 # v0.4.7
-          path: .sdk-server-0.4.7
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version: "3.11"
@@ -329,7 +325,7 @@ jobs:
         run: |
           python sdk/python/tests/verify_package.py sdk/python/dist \
             --server-python "$(command -v python)" \
-            --legacy-server-fixture .sdk-server-0.4.7/tests/sdk_server_fixture.py
+            --legacy-server-fixture tests/sdk_server_fixture.py
 
   typescript-sdk:
     name: TypeScript SDK (node${{ matrix.node }})

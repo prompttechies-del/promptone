@@ -2893,11 +2893,14 @@ def test_batch_item_shape_as_documented():
         ok("schema/%s_item_shape" % tool, want in (by_name[tool].description or ""),
            "documents %r" % want)
 
-    # `encoding="utf-8"` explicitly: the README is UTF-8 and contains non-ASCII (the language
+    # `encoding="utf-8"` explicitly: the guide is UTF-8 and contains non-ASCII (the language
     # examples), while `Path.read_text()` defaults to the locale encoding -- cp1252 on the Windows
     # runner, where the decode raised `UnicodeDecodeError` and this suite failed. It went unseen
     # because the Windows lane ran this file without the `mcp` extra, so it skipped at the top.
-    readme = (Path(__file__).resolve().parents[1] / "README.md").read_text(encoding="utf-8")
+    readme_path = Path(__file__).resolve().parents[1] / "docs" / "guide.md"
+    if not readme_path.exists():
+        readme_path = Path(__file__).resolve().parents[1] / "README.md"
+    readme = readme_path.read_text(encoding="utf-8")
     marker = "one tool call takes an array of `{"
     ok("docs/readme_names_the_batch_shape", marker in readme, "sentence not found")
     if marker in readme:
@@ -3313,7 +3316,7 @@ def test_shortlist_metadata_keys_are_documented():
     by_name = {t.name: t for t in asyncio.run(mcp_server.list_tools())}
     surfaces = {
         "tool description": by_name["promptone_shortlist"].description,
-        "README": (root / "README.md").read_text(encoding="utf-8"),
+        "README": (root / "docs" / "guide.md" if (root / "docs" / "guide.md").exists() else root / "README.md").read_text(encoding="utf-8"),
         "docs/cli-mcp.md": (root / "docs" / "cli-mcp.md").read_text(encoding="utf-8"),
     }
     for where, text in surfaces.items():

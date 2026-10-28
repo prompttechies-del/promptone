@@ -157,7 +157,7 @@ promptone-serve
 - `GET /health` reports readiness and loaded checkpoints.
 - **Playground at [`http://localhost:8000/ui/`](http://localhost:8000/ui/)**: write a message, add questions, and compare all three checkpoints side by side, with history, share links and ready-to-copy Python, JavaScript and curl.
 
-Set `PROMPTONE_API_KEY` to require a bearer token, `PROMPTONE_UI=0` to turn the playground off, and `PROMPTONE_CORS_ORIGINS` to allow pages on other origins. Docker images and compose files for CPU, CUDA and Apple Silicon are in [docs/docker.md](https://github.com/prompttechies-del/promptone/blob/main/docs/docker.md).
+Require a bearer token with `PROMPTONE_API_KEY`, disable the playground with `PROMPTONE_UI=0`, and allow pages on other origins with `PROMPTONE_CORS_ORIGINS`. Docker images and compose files for CPU, CUDA and Apple Silicon are in [docs/docker.md](https://github.com/prompttechies-del/promptone/blob/main/docs/docker.md).
 
 ## Ready-made presets
 
