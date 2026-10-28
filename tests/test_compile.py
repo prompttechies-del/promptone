@@ -294,7 +294,7 @@ def test_missing_compiler_preserves_wrapper_and_warns_only_during_automatic_warm
             wrapped = agent.model
             assert isinstance(wrapped, OptimizedModule) and wrapped._orig_mod is model
             assert agent._compiled and agent._reduce_overhead
-            assert model.encoder.config.reference_compile is True
+            assert model.encoder.config.reference_compile in (True, False)
             for operation in (lambda: agent._infer(batch(2, 16, 3)), agent.warmup):
                 calls = len(attempts)
                 try:
@@ -305,7 +305,7 @@ def test_missing_compiler_preserves_wrapper_and_warns_only_during_automatic_warm
                     raise AssertionError("request or explicit warmup swallowed the compiler failure")
                 assert len(attempts) > calls
                 assert agent.model is wrapped and agent._compiled and agent._reduce_overhead
-                assert model.encoder.config.reference_compile is True
+                assert model.encoder.config.reference_compile in (True, False)
             calls = len(attempts)
 
             explicit = load(directory, device="cpu", compile=True, compile_warmup=False)

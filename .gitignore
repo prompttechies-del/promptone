@@ -83,7 +83,11 @@ credentials.json
 *-local-command-*.txt
 
 # Documentation site build output (zensical build)
-site/
+_site/
+
+# Cloudflare Wrangler cache
+.wrangler/
+site/.wrangler/
 
 # ruff's cache, and the JSON the research harnesses write on every run
 .ruff_cache/

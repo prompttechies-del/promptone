@@ -3,6 +3,7 @@
 
 [project]
 site_name = "PromptOne"
+site_dir = "_site"
 site_description = "Multilingual, non-autoregressive System 1 decision engine"
 site_url = "https://prompttechies-del.github.io/promptone/"
 repo_url = "https://github.com/prompttechies-del/promptone"

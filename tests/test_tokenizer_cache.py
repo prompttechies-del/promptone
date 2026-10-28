@@ -37,7 +37,11 @@ with open(blob, "w") as f:
     f.write(ORIGINAL)
 
 link = os.path.join(snap_dir, "tokenizer_config.json")
-os.symlink(blob, link)
+try:
+    os.symlink(blob, link)
+except OSError:
+    print("SKIP: symlink creation requires elevated privilege on Windows")
+    sys.exit(0)
 
 check("setup/snapshot file is a symlink", os.path.islink(link), True)
 
