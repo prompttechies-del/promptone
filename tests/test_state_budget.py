@@ -204,7 +204,7 @@ def test_cap_based_figure_overstates_a_high_cardinality_question():
 def _readme_quotes():
     """The figures README.md states, parsed out of the token-budget bullet."""
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    with open(os.path.join(root, "README.md"), encoding="utf-8") as fh:
+    with open(os.path.join(root, "docs", "guide.md"), encoding="utf-8") as fh:
         text = fh.read()
     heads = {int(m) for m in re.findall(r"\*\*(\d+)-token\*\* head", text)}
     rooms = {int(m) for m in re.findall(r"\*\*(\d+) tokens for state\*\*", text)}
@@ -486,7 +486,7 @@ def test_page_arithmetic_is_build_head_arithmetic():
 # of it would be wrong.
 
 DOC_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-WINDOW_PAGES = ("README.md", os.path.join("docs", "hooks", "patterns.md"))
+WINDOW_PAGES = (os.path.join("docs", "guide.md"), os.path.join("docs", "hooks", "patterns.md"))
 SUBTRACTION = re.compile(r"max_len\s*-\s*head_max_len")
 
 
@@ -523,7 +523,7 @@ def _markdown_paragraphs():
     pages carry this teaching in. Code fences come along as paragraphs too, so a fence that pairs
     the budget with the word `window` has to teach the floor like prose does.
     """
-    paths = [os.path.join(DOC_ROOT, "README.md")]
+    paths = [os.path.join(DOC_ROOT, "docs", "guide.md")]
     for dirpath, _dirnames, filenames in sorted(os.walk(os.path.join(DOC_ROOT, "docs"))):
         for filename in sorted(filenames):
             if filename.endswith(".md"):
