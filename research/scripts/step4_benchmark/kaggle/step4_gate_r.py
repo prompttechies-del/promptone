@@ -46,7 +46,7 @@ assert n_gpu == 1, "expected exactly one visible T4, got %d" % n_gpu
 
 # --- promptone at the pinned SHA, without disturbing Kaggle's torch ------------------------------
 run([sys.executable, "-m", "pip", "install", "-q", "--no-deps",
-     "git+https://github.com/NandhaKishorM/promptone@%s" % PINNED_SHA])
+     "git+https://github.com/prompttechies-del/promptone@%s" % PINNED_SHA])
 for _mod, _pkg in (("safetensors", "safetensors"), ("datasets", "datasets"),
                    ("transformers", "transformers"), ("huggingface_hub", "huggingface_hub")):
     try:

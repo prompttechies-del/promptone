@@ -6,7 +6,7 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/fixtures"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/fixtures"
 )
 
 // The compiled tables against the fixture recorded from promptone/lang.py.

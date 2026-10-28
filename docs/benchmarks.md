@@ -1,9 +1,9 @@
 # Benchmarks and known limits
 
 PromptOne's results depend on the checkpoint, task, question wording, option count and hardware. Use
-the [full benchmark tables](https://github.com/NandhaKishorM/promptone/blob/main/BENCHMARKS.md)
+the [full benchmark tables](https://github.com/prompttechies-del/promptone/blob/main/BENCHMARKS.md)
 to find a comparable run before choosing a checkpoint or a confidence threshold. The
-[research directory](https://github.com/NandhaKishorM/promptone/tree/main/research) holds the scripts
+[research directory](https://github.com/prompttechies-del/promptone/tree/main/research) holds the scripts
 and result files behind the main tables.
 
 ## Find the relevant measurement
@@ -18,7 +18,7 @@ and result files behind the main tables.
 The published Jev figures alongside the original PromptOne suites come from third-party studies
 with different prompts and sample sizes. They are useful context, but are not a controlled
 head-to-head run. See the comparison notes in
-[`research/README.md`](https://github.com/NandhaKishorM/promptone/blob/main/research/README.md).
+[`research/README.md`](https://github.com/prompttechies-del/promptone/blob/main/research/README.md).
 
 Read accuracy together with the baseline and data split. For example, the typed-decisions
 benchmark reports 0.766 accuracy for the fine-tuned checkpoint, while both base checkpoints
@@ -44,7 +44,7 @@ or option count.
   fact near the beginning of the rendered label or description instead of using an opaque key that
   requires a lookup elsewhere in the state. A larger `head_max_len` can help options fit, but the
   checkpoints were trained at their shipped head length, as the maintainer notes in
-  [#171](https://github.com/NandhaKishorM/promptone/issues/171); widen `max_len` with it to preserve
+  [#171](https://github.com/prompttechies-del/promptone/issues/171); widen `max_len` with it to preserve
   room for the state, then measure accuracy and latency on your own labels. More budget is not a
   guaranteed accuracy improvement. See
   [token-budget shaping](hooks/patterns.md#token-budget-shaping) for the budget mechanics.
@@ -60,19 +60,19 @@ or option count.
   labels instead of the state. Check alternate option orders and wording, especially when a wrong
   decision is costly.
 - **Long documents:** The multilingual encoder can read up to 8,192 tokens when configured for
-  that limit, but the [long-context benchmark](https://github.com/NandhaKishorM/promptone/blob/main/research/results/long_context_multilingual.json)
+  that limit, but the [long-context benchmark](https://github.com/prompttechies-del/promptone/blob/main/research/results/long_context_multilingual.json)
   reports less reliable answers beyond about 4,000 tokens of preceding text. Measure accuracy at
   the lengths you expect in use.
 - **Latency:** The T4 figures do not predict CPU or cold-load time. Measure warm and cold calls
   with your own checkpoint, device, input lengths and number of questions.
 
-The [README's Honest limits section](https://github.com/NandhaKishorM/promptone#honest-limits)
+The [README's Honest limits section](https://github.com/prompttechies-del/promptone#honest-limits)
 has examples and current workarounds. The benchmark tables give the dataset and hardware
 behind each of the limits above.
 
 ## Reproduce or extend a result
 
-Start with the [script and result map](https://github.com/NandhaKishorM/promptone/blob/main/research/README.md)
+Start with the [script and result map](https://github.com/prompttechies-del/promptone/blob/main/research/README.md)
 and the run index at the top of `BENCHMARKS.md`. `research/scripts/bench_local.py` runs the
 51-language CPU sweep, `bench_apps.py` covers application workflows, and
 `bench_latency.py` measures routing and inference speed. The T4 notebook is generated from
@@ -84,7 +84,7 @@ When an adapter or community runtime differs from the official package, first ru
 representative states through both paths. Keep the checkpoint revision, state, questions, option
 order, and token budgets identical, then compare the raw probability for each option. The maintainer
 suggests agreement within about `1e-3` as a parity check in
-[#171](https://github.com/NandhaKishorM/promptone/issues/171).
+[#171](https://github.com/prompttechies-del/promptone/issues/171).
 If the probabilities differ, investigate the runtime or adapter before attributing a task-level
 accuracy gap to the checkpoint. Parity does not establish accuracy; evaluate separately against
 held-out reference labels from the target workflow.

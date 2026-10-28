@@ -10,8 +10,8 @@ hardware, reads 100+ languages, and its `Router` picks the checkpoint for each r
 ## Start here
 
 Install PromptOne and make a first decision with the README's
-[Installation](https://github.com/NandhaKishorM/promptone#installation) and
-[Quickstart](https://github.com/NandhaKishorM/promptone#quickstart). They stay in the README so there
+[Installation](https://github.com/prompttechies-del/promptone#installation) and
+[Quickstart](https://github.com/prompttechies-del/promptone#quickstart). They stay in the README so there
 is one copy to keep current.
 
 ## Find a guide
@@ -27,10 +27,10 @@ is one copy to keep current.
 | call PromptOne over HTTP from a client written against the Jev wire protocol | [HTTP API](http-api.md) |
 | run the SDK or the `promptone-serve` HTTP API in a container, on CPU or an NVIDIA GPU | [Docker quickstart](docker.md) |
 | build for ARM64 hosts or DGX Spark | [ARM64 and DGX Spark containers](docker-platforms.md) |
-| specialise a checkpoint for your own decisions | [Browser-agent fine-tuning example](finetune_browser_agent.md) and the [fine-tuning notebook](https://github.com/NandhaKishorM/promptone/blob/main/notebooks/promptone_finetune_typed_decisions_2xT4_kaggle.ipynb) |
+| specialise a checkpoint for your own decisions | [Browser-agent fine-tuning example](finetune_browser_agent.md) and the [fine-tuning notebook](https://github.com/prompttechies-del/promptone/blob/main/notebooks/promptone_finetune_typed_decisions_2xT4_kaggle.ipynb) |
 | judge benchmark results and deployment limits | [Benchmarks and known limits](benchmarks.md) |
 | look up a class, function or parameter | [Python API reference](reference/index.md) |
 | score a labelled dataset, compare to a baseline, or gate a build on it | [Evaluation harness](evals.md) |
 
 Confidence gating is in the
-[README](https://github.com/NandhaKishorM/promptone#automated-confidence-gating) for now.
+[README](https://github.com/prompttechies-del/promptone#automated-confidence-gating) for now.

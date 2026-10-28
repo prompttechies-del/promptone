@@ -20,7 +20,7 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/unicodedata"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/unicodedata"
 )
 
 // maxDepth bounds nesting, which also stops a self-referential []any from recursing forever.

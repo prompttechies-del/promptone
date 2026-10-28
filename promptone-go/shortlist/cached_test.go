@@ -7,7 +7,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/fixtures"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/fixtures"
 )
 
 type counting struct {

@@ -1,6 +1,6 @@
 # PromptOne Models: Obtaining the ONNX Artifacts
 
-The PromptOne Rust SDK ([README](https://github.com/NandhaKishorM/promptone/blob/main/promptone-rust/README.md)), a Rust port of the PromptOne Python SDK, runs
+The PromptOne Rust SDK ([README](https://github.com/prompttechies-del/promptone/blob/main/promptone-rust/README.md)), a Rust port of the PromptOne Python SDK, runs
 **ONNX** models through ONNX Runtime, not PyTorch weights, so no Python process is needed at runtime. This
 guide explains how to get those ONNX artifacts: either convert them yourself
 from the published PyTorch checkpoints (works today), or let the SDK download

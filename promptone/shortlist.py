@@ -13,7 +13,7 @@ they are given. This module does not change ``DecisionModel.forward``.
 per elimination round.
 
 The coarse-to-fine pattern is the one the README recommends and the one reported in
-https://github.com/NandhaKishorM/promptone/issues/102. Ranking here is cosine similarity on
+https://github.com/prompttechies-del/promptone/issues/102. Ranking here is cosine similarity on
 whatever vectors ``embed_fn`` returns. Issue #102's BANKING77 figures belong to that
 report; this module does not measure them.
 """

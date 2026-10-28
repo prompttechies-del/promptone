@@ -7,7 +7,7 @@ import (
 	"io/fs"
 	"path"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/unicodedata"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/unicodedata"
 )
 
 // roleKeys are the special-token roles tokenizer_config.json can name, in the order they are read.

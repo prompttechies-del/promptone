@@ -10,8 +10,8 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/agent"
-	"github.com/NandhaKishorM/promptone/promptone-go/router"
+	"github.com/prompttechies-del/promptone/promptone-go/agent"
+	"github.com/prompttechies-del/promptone/promptone-go/router"
 )
 
 func hexOf(s string) string { h := sha256.Sum256([]byte(s)); return hex.EncodeToString(h[:]) }

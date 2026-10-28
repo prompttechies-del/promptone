@@ -17,8 +17,8 @@
     <Authors>Convai Innovations</Authors>
     <Description>.NET port of the PromptOne Python SDK. Runs the multilingual, english and typed-decisions checkpoints locally on ONNX Runtime, with no Python at runtime. PromptOne is a non-autoregressive System 1 decision engine with calibrated probabilities.</Description>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/NandhaKishorM/promptone/tree/main/promptone-dotnet</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/NandhaKishorM/promptone</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/prompttechies-del/promptone/tree/main/promptone-dotnet</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/prompttechies-del/promptone</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>promptone;onnx;onnxruntime;llm;classification;nlp;decision-engine</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>

@@ -5,7 +5,7 @@ package onnx
 import (
 	"context"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/infer"
+	"github.com/prompttechies-del/promptone/promptone-go/infer"
 )
 
 // Session is the ONNX Runtime session. Without cgo it cannot be opened.

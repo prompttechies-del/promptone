@@ -10,8 +10,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/unicodedata"
-	"github.com/NandhaKishorM/promptone/promptone-go/schema"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/unicodedata"
+	"github.com/prompttechies-del/promptone/promptone-go/schema"
 )
 
 // The bounds clamp applies: a fitted temperature below 0.5 sharpens a coin flip into a

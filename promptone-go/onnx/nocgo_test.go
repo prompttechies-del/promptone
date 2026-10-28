@@ -7,7 +7,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/infer"
+	"github.com/prompttechies-del/promptone/promptone-go/infer"
 )
 
 func TestOpenWithoutCGO(t *testing.T) {

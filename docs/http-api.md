@@ -5,7 +5,7 @@ against Jev -- `hs-jev`, `typesafe-sdk`, or your own -- can point its base URL a
 keep working: PromptOne's `predict()` output is already schema-compatible, and the server adds only the
 HTTP surface: one decision route, a health probe, an optional bearer check and request limits.
 
-The [Python HTTP client](https://github.com/NandhaKishorM/promptone/blob/main/sdk/python/README.md)
+The [Python HTTP client](https://github.com/prompttechies-del/promptone/blob/main/sdk/python/README.md)
 provides synchronous `predict` and `health` calls with no runtime dependencies. Install it
 from `sdk/python` in the application environment to keep the inference stack on the server.
 
@@ -467,7 +467,7 @@ other route is `POST /v1/systemone/batch`, which answers one `questions` set ove
 section -- and every check above applies to it as it does to `POST /v1/systemone`: the same shape
 `400`s, the same unpaired-surrogate refusal, the same auth, admission, size limits, body-control
 validation and `500` mapping. The `promptone` CLI and MCP server cover local use -- see the
-[README](https://github.com/NandhaKishorM/promptone#readme).
+[README](https://github.com/prompttechies-del/promptone#readme).
 
 ## Browser playground
 

@@ -32,9 +32,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/agent"
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/hookrun"
-	"github.com/NandhaKishorM/promptone/promptone-go/schema"
+	"github.com/prompttechies-del/promptone/promptone-go/agent"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/hookrun"
+	"github.com/prompttechies-del/promptone/promptone-go/schema"
 )
 
 // RouteHook is a hook that sees the routing decision.

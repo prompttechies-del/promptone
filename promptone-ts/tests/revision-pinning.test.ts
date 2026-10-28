@@ -61,7 +61,7 @@ describe("loadNodeBundle pinning", () => {
         ? new StubResponse(cfgFile["rl_agent_config.json"])
         : new StubResponse(null, 404);
     }));
-    const cacheDir = path.join(os.homedir(), ".cache", "promptone-ts", "hf", "convaiinnovations__promptone", "root");
+    const cacheDir = path.join(os.homedir(), ".cache", "promptone-ts", "hf", "zameer1__promptone", "root");
     try {
       const bundle = await loadNodeBundle("zameer1/promptone");
       expect(urls[0]).toContain("/resolve/main/");
@@ -70,7 +70,7 @@ describe("loadNodeBundle pinning", () => {
       expect(bundle.revision).toBe("abc123");
       expect(bundle.cfg.act_costs).toEqual({ a: 0 });
     } finally {
-      fs.rmSync(path.join(os.homedir(), ".cache", "promptone-ts", "hf", "convaiinnovations__promptone"), { recursive: true, force: true });
+      fs.rmSync(path.join(os.homedir(), ".cache", "promptone-ts", "hf", "zameer1__promptone"), { recursive: true, force: true });
     }
   });
 
@@ -87,7 +87,7 @@ describe("loadNodeBundle pinning", () => {
       expect(urls[0]).toContain("/resolve/abc123/");
       expect(bundle.dir).toContain(path.join("root", "abc123"));
     } finally {
-      fs.rmSync(path.join(os.homedir(), ".cache", "promptone-ts", "hf", "convaiinnovations__promptone"), { recursive: true, force: true });
+      fs.rmSync(path.join(os.homedir(), ".cache", "promptone-ts", "hf", "zameer1__promptone"), { recursive: true, force: true });
     }
   });
 

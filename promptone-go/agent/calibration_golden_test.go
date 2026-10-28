@@ -8,11 +8,11 @@ import (
 	"testing"
 	"testing/fstest"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/infer"
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/decode"
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/fixtures"
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/pyjson"
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/pyvalue"
+	"github.com/prompttechies-del/promptone/promptone-go/infer"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/decode"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/fixtures"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/pyjson"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/pyvalue"
 )
 
 type idleSession struct{}

@@ -4,7 +4,7 @@ On the typed-decisions benchmark the base checkpoints score near chance zero-sho
 0.35 against a 0.318 random baseline — while the fine-tuned checkpoint reaches **0.766** on the
 same 2,000 decisions, above TypeSafe Jev's published 0.727 and above the 0.735 teacher
 self-agreement ceiling. Fine-tuning is where most of the value is, and the public
-[fine-tuning notebook](https://github.com/NandhaKishorM/promptone/blob/main/notebooks/promptone_finetune_typed_decisions_2xT4_kaggle.ipynb)
+[fine-tuning notebook](https://github.com/prompttechies-del/promptone/blob/main/notebooks/promptone_finetune_typed_decisions_2xT4_kaggle.ipynb)
 runs the whole loop on Kaggle's free 2xT4 GPUs: build the dataset, train with RLCD, fit
 calibration temperatures, evaluate, and push the result to the Hub. This page walks that
 notebook and points at the parts that stay load-bearing when you swap the data for your own.
@@ -109,7 +109,7 @@ decisions the default 400-item calibration slice leaves 5,600 training items, so
 spends **352** updates — 376 only if no slice were held out. That number is a reference for
 comparing runs of different sizes, not a cutoff: 1,100 *training* items at the same settings give
 72 updates (64 when 1,100 is the pre-split count and the 10% slice holds 110 out), and
-[#963](https://github.com/NandhaKishorM/promptone/issues/963) measured a head that collapsed there while
+[#963](https://github.com/prompttechies-del/promptone/issues/963) measured a head that collapsed there while
 8 epochs still failed on the task itself. A small dataset therefore needs more epochs to reach a
 similar update count.
 
@@ -143,14 +143,14 @@ trivially learnable signal to fit.
   task.
 - Positive control reaches 1.00 while the real task stays at the prior → the evidence points at
   task or representation difficulty rather than too few updates.
-  [#963](https://github.com/NandhaKishorM/promptone/issues/963) measured both at 8 epochs: the positive
+  [#963](https://github.com/prompttechies-del/promptone/issues/963) measured both at 8 epochs: the positive
   control reached 1.00 while the real task still collapsed.
 
 A passing positive control only shows the run can fit a deliberately easy signal; it is not proof
 that the real task is learnable or that the checkpoint generalizes.
 
 Takeoff near the ln K plateau is also seed-dependent, so one run is not evidence either way.
-[#963](https://github.com/NandhaKishorM/promptone/issues/963) saw 9 of 15 runs leave the plateau and 6
+[#963](https://github.com/prompttechies-del/promptone/issues/963) saw 9 of 15 runs leave the plateau and 6
 never do within 32 epochs, on identical data and configuration. Repeat the run with different seeds
 before concluding that a task is unlearnable or that a budget is fine, and read the collapse
 warning the run prints before gating on `min_confidence`.
@@ -178,7 +178,7 @@ example), set `amp=False` in `TrainConfig` from Python.
 ### What the options are worth
 
 Full fine-tunes of `zameer1/promptone` on one T4 per run, with the notebook's settings, from
-[#887](https://github.com/NandhaKishorM/promptone/issues/887).
+[#887](https://github.com/prompttechies-del/promptone/issues/887).
 
 On typed-decisions (6,000 training decisions, all 2,000 test decisions, one seed):
 
@@ -317,7 +317,7 @@ The PromptOne row of your own run is computed the same way — the notebook rebu
 the run's own numbers. Two habits worth copying: keep the slices you care about (a language, a
 workflow) inside held-out data, and report calibration next to accuracy, because the training
 signal is a distribution, not just a label. When you have numbers, a post in the repository's
-[Discussions](https://github.com/NandhaKishorM/promptone/discussions) is the place to share them;
+[Discussions](https://github.com/prompttechies-del/promptone/discussions) is the place to share them;
 benchmarks and known limits live in `BENCHMARKS.md` at the repository root.
 
 ## Pushing to the Hub
@@ -353,7 +353,7 @@ costs one epoch rather than the run.
   per-type scalars, not enough to validate against. Hold out your own evaluation data.
 - **Your labels must fit the three primitives.** If your decision is not a choice, a scale or a
   yes/no probability, shape it into one first. Two sharp edges are already documented: high
-  option counts degrade confidence selection ([#394](https://github.com/NandhaKishorM/promptone/issues/394)),
-  and forced-choice negation can follow the question over the state ([#377](https://github.com/NandhaKishorM/promptone/issues/377)).
+  option counts degrade confidence selection ([#394](https://github.com/prompttechies-del/promptone/issues/394)),
+  and forced-choice negation can follow the question over the state ([#377](https://github.com/prompttechies-del/promptone/issues/377)).
 - **Ship the config, not just the weights.** The removed `temperature_by_options` is the part
   that silently un-fits a calibration if it survives in a copied config.

@@ -6,7 +6,7 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/unicodedata"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/unicodedata"
 )
 
 const (

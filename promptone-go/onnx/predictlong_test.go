@@ -11,10 +11,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/agent"
-	"github.com/NandhaKishorM/promptone/promptone-go/schema"
-	"github.com/NandhaKishorM/promptone/promptone-go/sequence"
-	"github.com/NandhaKishorM/promptone/promptone-go/tokenizer"
+	"github.com/prompttechies-del/promptone/promptone-go/agent"
+	"github.com/prompttechies-del/promptone/promptone-go/schema"
+	"github.com/prompttechies-del/promptone/promptone-go/sequence"
+	"github.com/prompttechies-del/promptone/promptone-go/tokenizer"
 )
 
 // longDocument is a support thread of about n sentences with one localized signal in the middle,

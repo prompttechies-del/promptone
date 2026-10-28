@@ -9,9 +9,9 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/infer"
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/fixtures"
-	"github.com/NandhaKishorM/promptone/promptone-go/schema"
+	"github.com/prompttechies-del/promptone/promptone-go/infer"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/fixtures"
+	"github.com/prompttechies-del/promptone/promptone-go/schema"
 )
 
 // nopSession lets a bare Agent enter calls; hooks tests replace inference with hookState.stub.

@@ -10,8 +10,8 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/lang"
-	"github.com/NandhaKishorM/promptone/promptone-go/schema"
+	"github.com/prompttechies-del/promptone/promptone-go/lang"
+	"github.com/prompttechies-del/promptone/promptone-go/schema"
 )
 
 func TestTypeCodes(t *testing.T) {

@@ -8,9 +8,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/decode"
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/pyjson"
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/pyvalue"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/decode"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/pyjson"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/pyvalue"
 )
 
 // configFile is the checkpoint file the configuration is read from.

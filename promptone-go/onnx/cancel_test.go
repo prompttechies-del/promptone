@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/infer"
+	"github.com/prompttechies-del/promptone/promptone-go/infer"
 )
 
 func TestAlreadyCancelledContextDoesNotRun(t *testing.T) {

@@ -5,11 +5,11 @@
     "overlays": [
       {
         "commit": "8257e91e4c8c56902720496de75c0a8e2f3f6be7",
-        "pull_request": "https://github.com/NandhaKishorM/promptone/pull/1289"
+        "pull_request": "https://github.com/prompttechies-del/promptone/pull/1289"
       },
       {
         "commit": "7feac1d3ba4e30ba09bf658f0ec15001b64a9223",
-        "pull_request": "https://github.com/NandhaKishorM/promptone/pull/1286"
+        "pull_request": "https://github.com/prompttechies-del/promptone/pull/1286"
       }
     ],
     "method": "git show precision commit source; git apply exact rename commit patch for promptone/hooks.py; local combined reference, not upstream main",

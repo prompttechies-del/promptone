@@ -35,7 +35,7 @@ import unicodedata
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 TARGET = os.path.join(
-    HERE, "..", "promptone-java", "src", "main", "java", "com", "convaiinnovations", "promptone", "lang",
+    HERE, "..", "promptone-java", "src", "main", "java", "com", "prompttechies", "promptone", "lang",
     "UnicodeTables.java")
 
 WORD = re.compile(r"[^\W\d_]", re.UNICODE)
@@ -197,7 +197,7 @@ def render():
 // Regenerate with:
 //     python promptone-java/scripts/gen_unicode_tables.py
 // and `--check` fails when the committed copy no longer matches CPython.
-package com.convaiinnovations.promptone.lang;
+package com.prompttechies.promptone.lang;
 
 import java.util.ArrayList;
 import java.util.List;

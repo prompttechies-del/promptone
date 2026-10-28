@@ -12,11 +12,11 @@
 //
 // See samples/README.md for the classpath.
 
-import com.convaiinnovations.promptone.Agent;
-import com.convaiinnovations.promptone.PromptOneEmail;
-import com.convaiinnovations.promptone.Presets;
-import com.convaiinnovations.promptone.Question;
-import com.convaiinnovations.promptone.lang.LanguageDetection;
+import com.prompttechies.promptone.Agent;
+import com.prompttechies.promptone.PromptOneEmail;
+import com.prompttechies.promptone.Presets;
+import com.prompttechies.promptone.Question;
+import com.prompttechies.promptone.lang.LanguageDetection;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;

@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/fixtures"
-	"github.com/NandhaKishorM/promptone/promptone-go/router"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/fixtures"
+	"github.com/prompttechies-del/promptone/promptone-go/router"
 )
 
 // files reads a golden {path: digest} object; JSON null is a nil map, {} an empty one.

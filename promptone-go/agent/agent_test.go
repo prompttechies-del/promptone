@@ -14,12 +14,12 @@ import (
 	"testing/fstest"
 	"time"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/agent"
-	"github.com/NandhaKishorM/promptone/promptone-go/infer"
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/fixtures"
-	"github.com/NandhaKishorM/promptone/promptone-go/schema"
-	"github.com/NandhaKishorM/promptone/promptone-go/sequence"
-	"github.com/NandhaKishorM/promptone/promptone-go/tokenizer"
+	"github.com/prompttechies-del/promptone/promptone-go/agent"
+	"github.com/prompttechies-del/promptone/promptone-go/infer"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/fixtures"
+	"github.com/prompttechies-del/promptone/promptone-go/schema"
+	"github.com/prompttechies-del/promptone/promptone-go/sequence"
+	"github.com/prompttechies-del/promptone/promptone-go/tokenizer"
 )
 
 // run is what a fake session saw of one batch: its shape and, per row, checksums that name the

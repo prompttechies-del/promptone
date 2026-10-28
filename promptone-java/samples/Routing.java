@@ -13,10 +13,10 @@
 //
 // See samples/README.md for the classpath.
 
-import com.convaiinnovations.promptone.Agent;
-import com.convaiinnovations.promptone.Question;
-import com.convaiinnovations.promptone.Router;
-import com.convaiinnovations.promptone.Shortlist;
+import com.prompttechies.promptone.Agent;
+import com.prompttechies.promptone.Question;
+import com.prompttechies.promptone.Router;
+import com.prompttechies.promptone.Shortlist;
 import java.nio.file.Path;
 import java.util.LinkedHashMap;
 import java.util.List;

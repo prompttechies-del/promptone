@@ -4,7 +4,7 @@ import (
 	"io/fs"
 	"sort"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/digest"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/digest"
 )
 
 // langTempsField is the ConfigError.Field of a lang_temperatures option that cannot be used.

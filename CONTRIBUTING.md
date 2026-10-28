@@ -89,7 +89,7 @@ python -m compileall -q promptone/ tests/
 
 ## Documentation
 
-The site at [nandhakishorm.github.io/promptone](https://nandhakishorm.github.io/promptone/) builds from
+The site at [prompttechies-del.github.io/promptone](https://prompttechies-del.github.io/promptone/) builds from
 `docs/` with Zensical, and its API reference builds from the docstrings in `promptone/`. A new page
 appears under Guides without a config change; to put it somewhere else, add it to
 [`docs/.nav.yml`](docs/.nav.yml). For a docs or docstring change, build the site the way the CI

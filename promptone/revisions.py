@@ -38,7 +38,7 @@ REVIEWED = "reviewed"
 def _reviewed_pin(model_id_or_path: str) -> Optional[str]:
     """The reviewed SHA for `model_id_or_path`, matching repo ids case-insensitively.
 
-    Hugging Face repo ids are case-insensitive -- ``ConvaiInnovations/PromptOne`` resolves to the
+    Hugging Face repo ids are case-insensitive -- ``Zameer1/PromptOne`` resolves to the
     same repository as ``zameer1/promptone`` -- so a load that spells a released
     checkpoint differently must still find its pin. Refusing it instead would report a
     missing reviewed SHA for a repository that has one, which is the opposite of what the
@@ -65,7 +65,7 @@ def resolve_revision(model_id_or_path: str, revision: Optional[str] = None) -> O
     variable applies. The variable holds either a commit SHA/branch/tag, applied to
     every checkpoint load the way `Router(revision=)` applies one, or the word ``reviewed``, which
     looks `model_id_or_path` up in `PINNED_REVISIONS` -- case-insensitively, the way the Hub
-    itself reads repo ids, so `promptone.load("ConvaiInnovations/PromptOne")` finds its pin.
+    itself reads repo ids, so `promptone.load("Zameer1/PromptOne")` finds its pin.
 
     ``reviewed`` for a repository the table has no entry for raises rather than loading it
     unpinned: a pin that quietly resolves to nothing is the failure mode this control exists to

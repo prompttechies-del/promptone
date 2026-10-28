@@ -5,9 +5,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/fixtures"
-	"github.com/NandhaKishorM/promptone/promptone-go/presets"
-	"github.com/NandhaKishorM/promptone/promptone-go/schema"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/fixtures"
+	"github.com/prompttechies-del/promptone/promptone-go/presets"
+	"github.com/prompttechies-del/promptone/promptone-go/schema"
 )
 
 // canonical is the wire form of what Python recorded, read through ParseQuestions and written

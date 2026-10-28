@@ -9,10 +9,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/decode"
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/pyjson"
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/pyvalue"
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/unicodedata"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/decode"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/pyjson"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/pyvalue"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/unicodedata"
 )
 
 // calibrationField is the ConfigError.Field of a calibration payload that cannot be used.

@@ -180,7 +180,7 @@ jobs:
       # #1061 were each branched off main independently and none measured the merged tree, which
       # carries all four. That measurement now exists: on merged main 68804629 (release 0.4.2),
       # Actions run 38041041968, this lane's job
-      # https://github.com/NandhaKishorM/promptone/actions/runs/38041041968/job/114182848558
+      # https://github.com/prompttechies-del/promptone/actions/runs/38041041968/job/114182848558
       # registered 1192, aborted 24, ran 1168, and failed 0; the jdk-matrix lane on the same
       # run (job 114182848539) registered 1192, aborted 23, ran 1169, and failed 0. So the floor
       # is 1168, not 1007 -- the pre-#1061 number sat 161 below what actually runs, which is
@@ -444,13 +444,13 @@ jobs:
               --only tokenizer_ids.json --only sequences.json --only decode.json
               --only decode_text.json --only window_plan.json --only predict_long.json
             tests: >-
-              --tests com.convaiinnovations.promptone.tokenizer.TokenizerParityTest
-              --tests com.convaiinnovations.promptone.sequence.SequenceParityTest
-              --tests com.convaiinnovations.promptone.decode.DecoderParityTest
-              --tests com.convaiinnovations.promptone.tokenizer.PreTokenizerTablesTest
-              --tests com.convaiinnovations.promptone.tokenizer.TokenDecoderTest
-              --tests com.convaiinnovations.promptone.sequence.WindowPlanTest
-              --tests com.convaiinnovations.promptone.PredictLongTest
+              --tests com.prompttechies.promptone.tokenizer.TokenizerParityTest
+              --tests com.prompttechies.promptone.sequence.SequenceParityTest
+              --tests com.prompttechies.promptone.decode.DecoderParityTest
+              --tests com.prompttechies.promptone.tokenizer.PreTokenizerTablesTest
+              --tests com.prompttechies.promptone.tokenizer.TokenDecoderTest
+              --tests com.prompttechies.promptone.sequence.WindowPlanTest
+              --tests com.prompttechies.promptone.PredictLongTest
             # Measured locally: 493. The margin is deliberately smaller than the 8 the 183/175
             # pair used, because the smallest class in this cell is PreTokenizerTablesTest at 5
             # tests and a margin of 8 let that whole class be dropped with the floor still green
@@ -471,9 +471,9 @@ jobs:
             graph-model: multilingual
             families: --only predict.json --only tournament_golden.json
             tests: >-
-              --tests com.convaiinnovations.promptone.PredictParityTest
-              --tests com.convaiinnovations.promptone.OneOptionGraphTest
-              --tests com.convaiinnovations.promptone.TournamentParityTest
+              --tests com.prompttechies.promptone.PredictParityTest
+              --tests com.prompttechies.promptone.OneOptionGraphTest
+              --tests com.prompttechies.promptone.TournamentParityTest
             # 12 is a verified LOWER bound, not the union: #1059 and #1061 were branched
             # off main independently and each measured 12 for its own pair, so neither
             # measured all three classes together. Two of them use @TestFactory, so the
@@ -509,7 +509,7 @@ jobs:
             checkpoints: typed-decisions
             graph-model: typed-decisions
             families: --only typed_decisions.json
-            tests: --tests com.convaiinnovations.promptone.TypedDecisionsParityTest
+            tests: --tests com.prompttechies.promptone.TypedDecisionsParityTest
             # Measured locally: 14 -- 9 single-state cases, 3 batch configs, the config identity
             # check and the workflow-signature check. Exact rather than padded down, because the
             # two non-factory tests are what catch a wrong checkpoint/graph pairing and a margin

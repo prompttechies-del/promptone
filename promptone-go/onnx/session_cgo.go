@@ -10,7 +10,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/infer"
+	"github.com/prompttechies-del/promptone/promptone-go/infer"
 	ort "github.com/yalue/onnxruntime_go"
 )
 

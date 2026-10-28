@@ -7,8 +7,8 @@ import (
 	"math/big"
 	"slices"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/schema"
-	"github.com/NandhaKishorM/promptone/promptone-go/tokenizer"
+	"github.com/prompttechies-del/promptone/promptone-go/schema"
+	"github.com/prompttechies-del/promptone/promptone-go/tokenizer"
 )
 
 // ErrNoRoom is wrapped when the questions' heads fill the whole sequence, so no window can

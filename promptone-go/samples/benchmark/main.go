@@ -13,10 +13,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/agent"
-	"github.com/NandhaKishorM/promptone/promptone-go/lang"
-	"github.com/NandhaKishorM/promptone/promptone-go/onnx"
-	"github.com/NandhaKishorM/promptone/promptone-go/samples/internal/demo"
+	"github.com/prompttechies-del/promptone/promptone-go/agent"
+	"github.com/prompttechies-del/promptone/promptone-go/lang"
+	"github.com/prompttechies-del/promptone/promptone-go/onnx"
+	"github.com/prompttechies-del/promptone/promptone-go/samples/internal/demo"
 )
 
 const (

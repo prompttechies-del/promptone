@@ -12,10 +12,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/agent"
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/fixtures"
-	"github.com/NandhaKishorM/promptone/promptone-go/schema"
-	"github.com/NandhaKishorM/promptone/promptone-go/sequence"
+	"github.com/prompttechies-del/promptone/promptone-go/agent"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/fixtures"
+	"github.com/prompttechies-del/promptone/promptone-go/schema"
+	"github.com/prompttechies-del/promptone/promptone-go/sequence"
 )
 
 const longConfig = `{"max_len": 128, "head_max_len": 64}`

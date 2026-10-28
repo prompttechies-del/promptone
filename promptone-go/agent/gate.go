@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/pyjson"
-	"github.com/NandhaKishorM/promptone/promptone-go/schema"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/pyjson"
+	"github.com/prompttechies-del/promptone/promptone-go/schema"
 )
 
 // The states of the confidence gate, promptone.confidence.GATE_STATES. There is deliberately no state

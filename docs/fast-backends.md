@@ -179,7 +179,7 @@ the additive keyword-only CPU selector, unchanged GPU dtype default, and
 Tokenization, padding, temperature calibration and answer formatting remain the caller's job;
 this does not add an `Agent` backend or change its default execution path.
 
-The [closed PR #472](https://github.com/NandhaKishorM/promptone/pull/472) documented the earlier dtype
+The [closed PR #472](https://github.com/prompttechies-del/promptone/pull/472) documented the earlier dtype
 blocker. The action head's pooled state and confidence features are computed in fp32, even
 when a model's weights are explicitly bf16. Without autocast, the first action linear therefore
 received an fp32 input and bf16 weights. The forward now casts the concatenated input to the
@@ -217,7 +217,7 @@ are deliberately kept out of the repository.
 NVIDIA driver 615.71.09, 16,376 MiB VRAM. Checkpoint: `zameer1/promptone`,
 `multilingual` subdirectory at revision `1c5edc17a7acd8701df6fc341c0d179f1c62c982`.
 The baseline is main `fa9a2a7`. Full machine snapshots and unrounded measurements are in
-[`aoti_multilingual_rtx4070.json`](https://github.com/NandhaKishorM/promptone/blob/main/benchmarks/results/aoti_multilingual_rtx4070.json).
+[`aoti_multilingual_rtx4070.json`](https://github.com/prompttechies-del/promptone/blob/main/benchmarks/results/aoti_multilingual_rtx4070.json).
 
 | Measurement | Before | After |
 |---|---:|---:|

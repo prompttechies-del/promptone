@@ -1,6 +1,6 @@
 # Gate D — RLCD vs soft-CE default-loss panel (three seeds)
 
-Evidence for [#887](https://github.com/NandhaKishorM/promptone/issues/887) Step 4. The matrix exists to
+Evidence for [#887](https://github.com/prompttechies-del/promptone/issues/887) Step 4. The matrix exists to
 answer one question: does the single-seed soft-CE win hold up well enough to change the shipped
 default loss? It does not.
 

@@ -9,8 +9,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/infer"
-	"github.com/NandhaKishorM/promptone/promptone-go/schema"
+	"github.com/prompttechies-del/promptone/promptone-go/infer"
+	"github.com/prompttechies-del/promptone/promptone-go/schema"
 )
 
 // MinMarkerSlots is the fewest option slots the graph accepts: the exported head takes

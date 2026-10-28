@@ -1,3 +1,3 @@
-module github.com/NandhaKishorM/promptone/promptone-go
+module github.com/prompttechies-del/promptone/promptone-go
 
 go 1.22

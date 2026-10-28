@@ -41,7 +41,7 @@ Set `PROMPTONE_PRELOAD=0` to defer loading until the first prediction. Initial l
 download weights and need sufficient memory and disk space. The client timeout
 defaults to 120 seconds; the example allows 10 minutes for a cold load. Server
 configuration uses environment variables, not command-line flags. See the
-[server guide](https://github.com/NandhaKishorM/promptone/blob/main/README.md#self-hosting-http-server-jev-compatible).
+[server guide](https://github.com/prompttechies-del/promptone/blob/main/README.md#self-hosting-http-server-jev-compatible).
 
 ## Install in another JavaScript project
 
@@ -165,7 +165,7 @@ await promptone.predict(state, questions, { model: 'multilingual' });
 ```
 
 PromptOne accepts its local checkpoint aliases. The HTTP endpoint forwards the
-per-request controls documented in the [HTTP API](https://github.com/NandhaKishorM/promptone/blob/main/docs/http-api.md)
+per-request controls documented in the [HTTP API](https://github.com/prompttechies-del/promptone/blob/main/docs/http-api.md)
 reference, and this client exposes them as options on `predict()`:
 
 | option | wire field | meaning |

@@ -5,9 +5,9 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/fixtures"
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/pyjson"
-	"github.com/NandhaKishorM/promptone/promptone-go/schema"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/fixtures"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/pyjson"
+	"github.com/prompttechies-del/promptone/promptone-go/schema"
 )
 
 // goldenConf reads a recorded confidence: absent, a bool, "__nan__" or a number.

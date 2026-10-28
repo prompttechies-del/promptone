@@ -117,6 +117,6 @@ python scripts/check_http_inference_smoke.py
 Apple GPU acceleration needs native macOS PyTorch with MPS. Docker Desktop runs
 a Linux container, which has no MPS backend, so the container uses CPU. PromptOne
 already has an MPS device path, and
-[PR #51](https://github.com/NandhaKishorM/promptone/pull/51) and
-[PR #109](https://github.com/NandhaKishorM/promptone/pull/109) address MPS
+[PR #51](https://github.com/prompttechies-del/promptone/pull/51) and
+[PR #109](https://github.com/prompttechies-del/promptone/pull/109) address MPS
 compatibility and performance outside Docker.

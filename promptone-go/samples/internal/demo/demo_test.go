@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/sequence"
+	"github.com/prompttechies-del/promptone/promptone-go/sequence"
 )
 
 // Expected texts are json.dumps(state, ensure_ascii=False) from Python.

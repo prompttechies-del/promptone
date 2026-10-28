@@ -40,7 +40,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 TARGET = os.path.join(
-    HERE, "..", "promptone-java", "src", "main", "java", "com", "convaiinnovations", "promptone",
+    HERE, "..", "promptone-java", "src", "main", "java", "com", "prompttechies", "promptone",
     "tokenizer", "PreTokenizerTables.java")
 MAX = 0x110000
 SURROGATES = range(0xD800, 0xE000)
@@ -114,7 +114,7 @@ def render(tokenizer_path):
 // Regenerate with:
 //     python promptone-java/scripts/gen_pretokenizer_tables.py --tokenizer <path/to/tokenizer.json>
 // and `--check` fails when the committed copy no longer matches the reference.
-package com.convaiinnovations.promptone.tokenizer;
+package com.prompttechies.promptone.tokenizer;
 
 /**
  * The letter and number classes the GPT-2 pre-tokenizer pattern splits on, recorded from the

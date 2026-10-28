@@ -3,7 +3,7 @@ package tokenizer
 import (
 	"testing"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/fixtures"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/fixtures"
 )
 
 var shipped = [...]string{"english", "multilingual"}

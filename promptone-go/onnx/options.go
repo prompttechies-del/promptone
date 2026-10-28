@@ -8,7 +8,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/digest"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/digest"
 )
 
 // LibraryEnv names the environment variable that holds the path of the ONNX Runtime shared

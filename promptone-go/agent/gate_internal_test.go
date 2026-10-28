@@ -5,8 +5,8 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/pyjson"
-	"github.com/NandhaKishorM/promptone/promptone-go/schema"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/pyjson"
+	"github.com/prompttechies-del/promptone/promptone-go/schema"
 )
 
 func probsOf(n int) schema.Probabilities {

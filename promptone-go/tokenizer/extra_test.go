@@ -10,7 +10,7 @@ import (
 	"testing"
 	"unicode/utf8"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/fixtures"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/fixtures"
 )
 
 // go_extra.json holds what the crate answers over far more input than the corpus: every code

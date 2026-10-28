@@ -7,11 +7,11 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/pyjson"
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/pyvalue"
-	"github.com/NandhaKishorM/promptone/promptone-go/lang"
-	"github.com/NandhaKishorM/promptone/promptone-go/schema"
-	"github.com/NandhaKishorM/promptone/promptone-go/tokenizer"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/pyjson"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/pyvalue"
+	"github.com/prompttechies-del/promptone/promptone-go/lang"
+	"github.com/prompttechies-del/promptone/promptone-go/schema"
+	"github.com/prompttechies-del/promptone/promptone-go/tokenizer"
 )
 
 // The head-budget literals of promptone/common.py's build_head, which Python does not name.

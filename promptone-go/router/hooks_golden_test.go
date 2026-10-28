@@ -9,11 +9,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/agent"
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/fixtures"
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/hookrun"
-	"github.com/NandhaKishorM/promptone/promptone-go/lang"
-	"github.com/NandhaKishorM/promptone/promptone-go/router"
+	"github.com/prompttechies-del/promptone/promptone-go/agent"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/fixtures"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/hookrun"
+	"github.com/prompttechies-del/promptone/promptone-go/lang"
+	"github.com/prompttechies-del/promptone/promptone-go/router"
 )
 
 // hookRecorder collects what the hooks saw, in order, and the warnings the Router reported.

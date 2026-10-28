@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/lang"
+	"github.com/prompttechies-del/promptone/promptone-go/lang"
 )
 
 func TestStateOptions(t *testing.T) {

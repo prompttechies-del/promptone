@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/pyjson"
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/pyvalue"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/pyjson"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/pyvalue"
 )
 
 // Answer is one typed answer: a *ChoiceAnswer, *ScoreAnswer or *NoulAnswer. Switch on the

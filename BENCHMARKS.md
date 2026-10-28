@@ -12,7 +12,7 @@ Every checkpoint answered **byte-identical questions** in each run (fixed seed).
 
 **Calibration columns in the CPU sweep predate the temperature clamp.** The 51-language ECE and mean-confidence figures were produced before #42 clamped temperatures to `[0.5, 5]`, so today's package reports different confidence for the affected buckets. Accuracy columns are unaffected, because a temperature-scaled softmax has the same argmax at every positive temperature.
 
-The same 51 languages and 5,100 cases have now been re-run after the temperature clamp, in both regimes (`research/results/cpu_51_language_sweep_clamped.json`, [#208](https://github.com/NandhaKishorM/promptone/issues/208)). Macro accuracy reproduces at **0.2269** exactly, and macro ECE moves **0.7331 → 0.5709**:
+The same 51 languages and 5,100 cases have now been re-run after the temperature clamp, in both regimes (`research/results/cpu_51_language_sweep_clamped.json`, [#208](https://github.com/prompttechies-del/promptone/issues/208)). Macro accuracy reproduces at **0.2269** exactly, and macro ECE moves **0.7331 → 0.5709**:
 
 | | committed | re-run, raw temperatures | re-run, as served |
 |---|---|---|---|
@@ -24,7 +24,7 @@ The same 51 languages and 5,100 cases have now been re-run after the temperature
 
 The raw-temperature column reproduces the committed file, so the only variable left is the clamp. `choice:11+` is the sole bucket it moves, and every case in this sweep is a 20-option question, so the clamp applies to all 5,100 — and lowers ECE in all 51 languages. `acc_at_50_coverage` is the one rank-quality column that uses the confidence values: macro 0.3004 → 0.3020, and `en` 0.94 → 0.98, so the flatter distribution selects a slightly better half rather than a worse one.
 
-**The multilingual columns below are the re-run, not the committed file.** The committed `cpu_51_language_sweep.json` was measured at promptone 0.2.0, and its `promptone-multilingual` half does not reproduce on current code — 51 languages and 5,100 cases re-run under promptone 0.2.0, 0.3.7 and 0.3.20, on x86 CPU and on an Apple M5 under both CPU and MPS, all give **0.4008** macro accuracy and match the committed file on only **6 of 51** languages, while the `promptone` half reproduces exactly on all of them. Three machines agreeing settled it ([#208](https://github.com/NandhaKishorM/promptone/issues/208)). The table therefore prints the refreshed numbers for both checkpoints, from `research/results/cpu_51_language_sweep_refreshed.json`, which records the environment and keeps the superseded committed columns beside the new ones:
+**The multilingual columns below are the re-run, not the committed file.** The committed `cpu_51_language_sweep.json` was measured at promptone 0.2.0, and its `promptone-multilingual` half does not reproduce on current code — 51 languages and 5,100 cases re-run under promptone 0.2.0, 0.3.7 and 0.3.20, on x86 CPU and on an Apple M5 under both CPU and MPS, all give **0.4008** macro accuracy and match the committed file on only **6 of 51** languages, while the `promptone` half reproduces exactly on all of them. Three machines agreeing settled it ([#208](https://github.com/prompttechies-del/promptone/issues/208)). The table therefore prints the refreshed numbers for both checkpoints, from `research/results/cpu_51_language_sweep_refreshed.json`, which records the environment and keeps the superseded committed columns beside the new ones:
 
 | | committed (`promptone-multilingual`) | refreshed |
 |---|---|---|
@@ -376,7 +376,7 @@ An independent study measured `promptone` as a dynamically batched service on a 
 SAM.gov notices. Each request asked the same three typed questions, so the table reports decisions per second
 (three decisions per request) at the highest tested load that met both the latency SLO and the achieved-rate gate.
 The study pinned PromptOne to
-[`6a58191`](https://github.com/NandhaKishorM/promptone/commit/6a5819129eb220570792e417e49723d697efd76f)
+[`6a58191`](https://github.com/prompttechies-del/promptone/commit/6a5819129eb220570792e417e49723d697efd76f)
 and recorded the checkpoint hashes, software versions and GPU environments. Sweep rows, parity counts, the replay
 summary and the environments: `research/results/nvidia_capacity_20260925.json`. Sweep and replay script:
 `research/scripts/bench_nvidia_capacity.py`.

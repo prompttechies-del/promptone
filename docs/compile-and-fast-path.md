@@ -129,7 +129,7 @@ processes.
 
 Reproduce cold/restart timings, memory, and cache counters with
 `benchmarks/bench_compile_defaults.py`; see
-[the recorded measurements](https://github.com/NandhaKishorM/promptone/blob/main/benchmarks/results/compile-defaults/README.md).
+[the recorded measurements](https://github.com/prompttechies-del/promptone/blob/main/benchmarks/results/compile-defaults/README.md).
 
 ## AOTInductor
 

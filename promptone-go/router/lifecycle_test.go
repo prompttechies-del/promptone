@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/agent"
-	"github.com/NandhaKishorM/promptone/promptone-go/router"
-	"github.com/NandhaKishorM/promptone/promptone-go/schema"
+	"github.com/prompttechies-del/promptone/promptone-go/agent"
+	"github.com/prompttechies-del/promptone/promptone-go/router"
+	"github.com/prompttechies-del/promptone/promptone-go/schema"
 )
 
 const (

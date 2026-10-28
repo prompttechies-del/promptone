@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/schema"
+	"github.com/prompttechies-del/promptone/promptone-go/schema"
 )
 
 // Request is a labelled request to route.

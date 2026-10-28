@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/fixtures"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/fixtures"
 )
 
 const maxRune = 0x110000

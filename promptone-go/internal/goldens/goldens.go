@@ -5,9 +5,9 @@ package goldens
 import (
 	"testing"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/fixtures"
-	"github.com/NandhaKishorM/promptone/promptone-go/lang"
-	"github.com/NandhaKishorM/promptone/promptone-go/schema"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/fixtures"
+	"github.com/prompttechies-del/promptone/promptone-go/lang"
+	"github.com/prompttechies-del/promptone/promptone-go/schema"
 )
 
 // Value converts a parsed golden value into one the library accepts as a state or a criterion:

@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/lang"
+	"github.com/prompttechies-del/promptone/promptone-go/lang"
 )
 
 func ExampleAnalyze() {

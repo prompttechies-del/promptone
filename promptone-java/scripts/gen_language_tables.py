@@ -23,7 +23,7 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(os.path.dirname(HERE))
 TARGET = os.path.join(
-    HERE, "..", "promptone-java", "src", "main", "java", "com", "convaiinnovations", "promptone", "lang",
+    HERE, "..", "promptone-java", "src", "main", "java", "com", "prompttechies", "promptone", "lang",
     "LanguageTables.java")
 
 
@@ -147,7 +147,7 @@ def render():
 // Regenerate with:
 //     python promptone-java/scripts/gen_language_tables.py
 // and `--check` fails when the committed copy no longer matches promptone/lang.py.
-package com.convaiinnovations.promptone.lang;
+package com.prompttechies.promptone.lang;
 
 import java.util.Collections;
 import java.util.LinkedHashMap;

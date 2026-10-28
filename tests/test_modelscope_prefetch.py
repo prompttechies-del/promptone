@@ -232,9 +232,9 @@ class TypeTests(unittest.TestCase):
                 self.assertEqual(prefetch.main(), 0)
             # Both types of one repository land in one merged snapshot, keyed by the revision tip.
             snapshots = sorted(p.name for p in
-                               (cache / "models--convaiinnovations--promptone" / "snapshots").iterdir())
+                               (cache / "models--zameer1--promptone" / "snapshots").iterdir())
             self.assertEqual(snapshots, [TIP_COMMIT])
-            snapshot = cache / "models--convaiinnovations--promptone" / "snapshots" / TIP_COMMIT
+            snapshot = cache / "models--zameer1--promptone" / "snapshots" / TIP_COMMIT
             for rel in ("rl_agent_config.json", "model.safetensors", "encoder/config.json",
                         "multilingual/rl_agent_config.json", "multilingual/model.safetensors"):
                 self.assertTrue(snapshot.joinpath(rel).is_file(), rel)
@@ -272,7 +272,7 @@ class SelectionTests(unittest.TestCase):
         with patch.dict(os.environ, {"HF_HUB_CACHE": "", "HF_HOME": "/home"}):
             self.assertEqual(prefetch.cache_root(None), Path("/home/hub"))
         self.assertEqual(prefetch.repo_folder("zameer1/promptone"),
-                         "models--convaiinnovations--promptone")
+                         "models--zameer1--promptone")
 
 
 class BakeTests(unittest.TestCase):
@@ -401,7 +401,7 @@ class BakeTests(unittest.TestCase):
                             "multilingual/tokenizer/*", "multilingual/encoder/*"],
             cache_dir=str(self.cache), local_files_only=True,
         )
-        expected = self.cache / "models--convaiinnovations--promptone" / "snapshots" / TIP_COMMIT
+        expected = self.cache / "models--zameer1--promptone" / "snapshots" / TIP_COMMIT
         self.assertEqual(Path(os.path.realpath(resolved)), Path(os.path.realpath(str(expected))))
 
     def test_the_commit_the_bake_keyed_resolves_as_a_pin(self):

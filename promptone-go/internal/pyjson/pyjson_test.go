@@ -9,7 +9,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/fixtures"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/fixtures"
 )
 
 func TestFloatReprMatchesCPython(t *testing.T) {

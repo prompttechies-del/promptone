@@ -7,7 +7,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/infer"
+	"github.com/prompttechies-del/promptone/promptone-go/infer"
 )
 
 // GraphError reports a graph file promptone cannot run: it is missing, is not the fused layout, or

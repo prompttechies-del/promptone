@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/agent"
-	"github.com/NandhaKishorM/promptone/promptone-go/infer"
-	"github.com/NandhaKishorM/promptone/promptone-go/schema"
+	"github.com/prompttechies-del/promptone/promptone-go/agent"
+	"github.com/prompttechies-del/promptone/promptone-go/infer"
+	"github.com/prompttechies-del/promptone/promptone-go/schema"
 )
 
 // scorer is a stand-in for a native session: it prefers the second option of every question.

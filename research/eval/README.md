@@ -11,7 +11,7 @@ record behind the published numbers, so they could not be re-derived without a G
 and the original environment.
 
 This addresses the ask in
-[#35](https://github.com/NandhaKishorM/promptone/issues/35):
+[#35](https://github.com/prompttechies-del/promptone/issues/35):
 
 > A fixed prompt format plus a per-language ECE report is exactly what the repo
 > lacks ... Per-case JSON would be very welcome too.
@@ -114,7 +114,7 @@ sampling, prompt text, option construction and inference path are all identical 
 the committed run.
 
 The `macro_ece` gap on english is the temperature clamp — `choice:11+` is `0.1006`
-raw and `0.5` as served ([#208](https://github.com/NandhaKishorM/promptone/issues/208)).
+raw and `0.5` as served ([#208](https://github.com/prompttechies-del/promptone/issues/208)).
 `--unclamped` exists so both regimes can be produced from one tool. The single-language
 view is the same result in miniature (`--langs en --unclamped`):
 
@@ -186,7 +186,7 @@ not just against this harness's own arithmetic.
   low score in one language is not by itself evidence of a misroute — check
   `promptone.lang.analyse` for the script before concluding which checkpoint was used.
 * The `confidence == 0.0` bin boundary is the one
-  [#39](https://github.com/NandhaKishorM/promptone/pull/39) settled: the first bin is closed
+  [#39](https://github.com/prompttechies-del/promptone/pull/39) settled: the first bin is closed
   at the bottom, so `0.0` is counted. This harness used `conf > lo` for every bin until
   the divergence was found, which made it the only one of the four implementations that
   binned differently. It now matches `promptone.common.ece_score`,
@@ -392,7 +392,7 @@ that the control stays out of the default run.
 ## Metamorphic option-order robustness (experimental)
 
 `metamorphic.py` adds the initial scope of
-[#244](https://github.com/NandhaKishorM/promptone/issues/244): **choice option order robustness**, and the label-renaming transformation from [#512](https://github.com/NandhaKishorM/promptone/issues/512), without changing model/runtime behavior. Paraphrases, structured-state permutations, `score` and `noul` perturbations are intentionally deferred. Run from the repository root after installing PromptOne and `datasets`:
+[#244](https://github.com/prompttechies-del/promptone/issues/244): **choice option order robustness**, and the label-renaming transformation from [#512](https://github.com/prompttechies-del/promptone/issues/512), without changing model/runtime behavior. Paraphrases, structured-state permutations, `score` and `noul` perturbations are intentionally deferred. Run from the repository root after installing PromptOne and `datasets`:
 
 ```bash
 python -m research.eval.metamorphic --model zameer1/promptone \
@@ -436,7 +436,7 @@ Metrics are grouped under `option_order`, `label_rename` and `overall`:
 
 At high option counts PromptOne's head token budget can cut the options themselves, and two options that share a prefix can come out of the cut as the same token span, which removes the question's ability to tell them apart. This matters for `label_rename`: a shorter label leaves more room for its description, so the baseline and the renamed input can survive the budget with **different content**. For `iot_hue_lightoff: iot hue lightoff` a roomy budget keeps the semantic description on both sides, but a tight budget can keep `iot_` on the baseline and `A: t` on the renamed variant -- no longer information-equivalent.
 
-This section is an evaluation-side follow-up motivated by [#543](https://github.com/NandhaKishorM/promptone/issues/543), [#517](https://github.com/NandhaKishorM/promptone/issues/517) and [#569](https://github.com/NandhaKishorM/promptone/issues/569). #543 raised option collapse at high option counts and was closed as addressed at runtime in v0.3.21 via #569/#542: the model side now reports, for an individual inference, which options lost a token span of their own. That report does not say whether the baseline and transformed variants of a *metamorphic comparison* still carry equivalent option information, which is the question this diagnostic answers -- per comparison, so the resulting drift is not read as pure lexical-label sensitivity.
+This section is an evaluation-side follow-up motivated by [#543](https://github.com/prompttechies-del/promptone/issues/543), [#517](https://github.com/prompttechies-del/promptone/issues/517) and [#569](https://github.com/prompttechies-del/promptone/issues/569). #543 raised option collapse at high option counts and was closed as addressed at runtime in v0.3.21 via #569/#542: the model side now reports, for an individual inference, which options lost a token span of their own. That report does not say whether the baseline and transformed variants of a *metamorphic comparison* still carry equivalent option information, which is the question this diagnostic answers -- per comparison, so the resulting drift is not read as pure lexical-label sensitivity.
 
 With a real model, the CLI and `evaluate_variants()` derive a budget probe from the agent (`agent.cfg`) and attach a budget diagnostic to every variant, measured by rendering the options through the same tokenizer/`build_sequence` budget path the model input uses. `evaluate()` has no agent, so it probes only when it is passed an explicit `budget`:
 

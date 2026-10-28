@@ -5,8 +5,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/fixtures"
-	"github.com/NandhaKishorM/promptone/promptone-go/tokenizer"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/fixtures"
+	"github.com/prompttechies-del/promptone/promptone-go/tokenizer"
 )
 
 // The examples that run use a tiny byte-level tokenizer built in memory. A real checkpoint loads

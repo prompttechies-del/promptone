@@ -7,7 +7,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/infer"
+	"github.com/prompttechies-del/promptone/promptone-go/infer"
 )
 
 // paths holds the three locations the model-backed tests need.

@@ -84,7 +84,7 @@ It is not calibrated as shipped: `promptone-multilingual` ships `temperature: [1
 `temperature_by_options` at all, and the english checkpoint's `choice:11+` entry is refused by the
 loader's own clamp with a warning that says to treat it as uncalibrated. Fit and validate the
 threshold on held-out data at the option counts your workload uses -- see the README's
-[Calibration](https://github.com/NandhaKishorM/promptone#calibration) section.
+[Calibration](https://github.com/prompttechies-del/promptone#calibration) section.
 
 ### Routing with the full conversation
 
@@ -350,7 +350,7 @@ Every runnable takes `max_len` and `head_max_len`, the two per-request knobs the
 A choice question's options share the checkpoint's *option* budget -- `head_max_len`, 192 tokens on
 `promptone` and 256 on `promptone-multilingual` -- and each option carries its own description, so past
 roughly 20 options every label is trimmed to fit and similar labels start reaching the model as the
-same text. See the README's [Honest limits](https://github.com/NandhaKishorM/promptone#honest-limits)
+same text. See the README's [Honest limits](https://github.com/prompttechies-del/promptone#honest-limits)
 for the same effect measured on Banking77.
 
 Two situations call for it. A routing node with many branches overflows the *option* budget, and

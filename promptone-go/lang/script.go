@@ -4,7 +4,7 @@ import (
 	"math"
 	"strconv"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/unicodedata"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/unicodedata"
 )
 
 // stopList is one language's function words.

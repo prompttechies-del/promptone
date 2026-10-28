@@ -6,9 +6,9 @@ import (
 	"log"
 	"os"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/agent"
-	"github.com/NandhaKishorM/promptone/promptone-go/onnx"
-	"github.com/NandhaKishorM/promptone/promptone-go/schema"
+	"github.com/prompttechies-del/promptone/promptone-go/agent"
+	"github.com/prompttechies-del/promptone/promptone-go/onnx"
+	"github.com/prompttechies-del/promptone/promptone-go/schema"
 )
 
 // Open a fused graph, hand it to the agent, and ask one question. The agent closes the session.

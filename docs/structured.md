@@ -207,9 +207,9 @@ probability. Reading it as "about c of the answers returned at c are correct" ho
 temperatures have been fitted and validated on held-out data for that checkpoint and question shape.
 The shipped checkpoints are over-confident as shipped and `promptone-multilingual` ships with no fitted
 temperatures at all — see the README's
-[Calibration](https://github.com/NandhaKishorM/promptone#calibration) and
-[Honest limits](https://github.com/NandhaKishorM/promptone#honest-limits) sections, and the
-[fine-tuning notebook](https://github.com/NandhaKishorM/promptone/blob/main/notebooks/promptone_finetune_typed_decisions_2xT4_kaggle.ipynb)
+[Calibration](https://github.com/prompttechies-del/promptone#calibration) and
+[Honest limits](https://github.com/prompttechies-del/promptone#honest-limits) sections, and the
+[fine-tuning notebook](https://github.com/prompttechies-del/promptone/blob/main/notebooks/promptone_finetune_typed_decisions_2xT4_kaggle.ipynb)
 for the fitting loop. Fit before you rely on the level; report it because it is the quantity the
 gate and the eval harness both use.
 

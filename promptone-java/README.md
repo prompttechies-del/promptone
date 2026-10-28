@@ -51,7 +51,7 @@ fitted per-bucket temperatures, multilingual is `1024 / 256` with none, and mult
 ## Ask questions
 
 ```java
-import com.convaiinnovations.promptone.*;
+import com.prompttechies.promptone.*;
 import java.nio.file.Path;
 import java.util.*;
 
@@ -161,7 +161,7 @@ MASSIVE Hindi intent against 0.050 for random guessing, and it reports high conf
 so. So a `Router` picks the checkpoint before the question is asked.
 
 ```java
-import com.convaiinnovations.promptone.Router;
+import com.prompttechies.promptone.Router;
 import java.nio.file.Path;
 
 try (Router router = Router.builder()
@@ -215,7 +215,7 @@ shared forward pass moves the last bits). `Router` is a
 `lang.LanguageDetection` is the router's evidence, usable without one:
 
 ```java
-import com.convaiinnovations.promptone.lang.LanguageDetection;
+import com.prompttechies.promptone.lang.LanguageDetection;
 
 LanguageDetection.Analysis seen = LanguageDetection.analyse(state);
 seen.script();              // "latin", "han", "devanagari", ... or "unknown"
@@ -232,7 +232,7 @@ Swedish–Danish marker still prefer the multilingual checkpoint.
 Five ready-made question sets, word for word the reference's:
 
 ```java
-import com.convaiinnovations.promptone.Presets;
+import com.prompttechies.promptone.Presets;
 
 Map<String, Question> questions = Presets.triage();        // or email(), guard(),
                                                            // moderation(), router()
@@ -250,7 +250,7 @@ Choice options share one `head_max_len`, so a seventeen-label set leaves few tok
 reduced set — no second decision pass.
 
 ```java
-import com.convaiinnovations.promptone.Shortlist;
+import com.prompttechies.promptone.Shortlist;
 
 Shortlist.Embedder embedder = texts -> myBiEncoder.embed(texts);   // your vectors
 Shortlist.Shortlisted out = Shortlist.predict(agent, state, questions,
@@ -286,7 +286,7 @@ checkpoint and an English-only cleaner left their quoted history — often a *di
 weighing on the answer as much as the new message.
 
 ```java
-import com.convaiinnovations.promptone.PromptOneEmail;
+import com.prompttechies.promptone.PromptOneEmail;
 import java.util.Map;
 
 String body = """
@@ -325,8 +325,8 @@ than leaving one boilerplate line behind.
 ## Lower-level pieces
 
 ```java
-import com.convaiinnovations.promptone.config.AgentConfig;
-import com.convaiinnovations.promptone.tokenizer.Tokenizer;
+import com.prompttechies.promptone.config.AgentConfig;
+import com.prompttechies.promptone.tokenizer.Tokenizer;
 import java.nio.file.Path;
 
 Tokenizer tok = Tokenizer.fromModelDirectory(Path.of("./checkpoint"));
@@ -360,7 +360,7 @@ and question shape. Pass a `Map` instead of a scalar to gate each option-count b
 ## Deciding against a JSON schema
 
 ```java
-import com.convaiinnovations.promptone.json.Json;
+import com.prompttechies.promptone.json.Json;
 
 Map<String, Object> schema = (Map<String, Object>) Json.parse("""
     {"type": "object", "properties": {
@@ -696,10 +696,10 @@ cd promptone-java && ./gradlew publishToMavenLocal
 ```
 
 ```kotlin
-dependencies { implementation("com.convaiinnovations:promptone-java:0.1.0-SNAPSHOT") }
+dependencies { implementation("com.prompttechies:promptone-java:0.1.0-SNAPSHOT") }
 ```
 
-Publishing to Maven Central needs the `com.convaiinnovations` namespace verified by the project
+Publishing to Maven Central needs the `com.prompttechies` namespace verified by the project
 owner, a Central portal token and a PGP signing key. `.github/workflows/release-java.yml` is wired
 for it and has never been run; signing activates only when a key is present, so `build` and
 `publishToMavenLocal` work without any of it.

@@ -1,8 +1,8 @@
 package agent
 
 import (
-	"github.com/NandhaKishorM/promptone/promptone-go/schema"
-	"github.com/NandhaKishorM/promptone/promptone-go/sequence"
+	"github.com/prompttechies-del/promptone/promptone-go/schema"
+	"github.com/prompttechies-del/promptone/promptone-go/sequence"
 )
 
 // usage is one state's report, from its question rows (seqs, in question order) and the slice of

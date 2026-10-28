@@ -1,6 +1,6 @@
 # Compile defaults measurements (2026-10-03)
 
-Source: PR bodies #718 and #576 (`gh pr view 718 --repo NandhaKishorM/promptone --json body`
+Source: PR bodies #718 and #576 (`gh pr view 718 --repo prompttechies-del/promptone --json body`
 and the same command for 576). The requested `docs/fast-backends.md` is now
 `docs/compile-and-fast-path.md`. Base: fa9a2a7, branch feat/compile-defaults.
 

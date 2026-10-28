@@ -21,7 +21,7 @@ import (
 	"math"
 	"strconv"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/schema"
+	"github.com/prompttechies-del/promptone/promptone-go/schema"
 )
 
 // ErrShape is wrapped when a logit row is narrower than the option count, or the action row is

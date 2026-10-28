@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: Documentation
-    url: https://nandhakishorm.github.io/promptone/
+    url: https://prompttechies-del.github.io/promptone/
     about: Installation, routing, serving, fine-tuning and prediction hooks.
   - name: README and examples
-    url: https://github.com/NandhaKishorM/promptone#readme
+    url: https://github.com/prompttechies-del/promptone#readme
     about: Quickstart, benchmarks and usage examples.

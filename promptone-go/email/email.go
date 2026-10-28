@@ -4,7 +4,7 @@ import (
 	"math"
 	"strings"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/unicodedata"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/unicodedata"
 )
 
 // DefaultMaxChars is the length CleanBody cuts a body to unless told otherwise.

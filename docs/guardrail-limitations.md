@@ -1,7 +1,7 @@
 # Guardrail Limitations
 
 The guard presets detect direct attacks well and instructions embedded in document-shaped text
-much less well. [#781](https://github.com/NandhaKishorM/promptone/issues/781) measured this on 53
+much less well. [#781](https://github.com/prompttechies-del/promptone/issues/781) measured this on 53
 synthetic labelled cases; the numbers below are that reporter's measurements, not ours, and this
 page reports them rather than restating them as our own benchmarks.
 
@@ -59,7 +59,7 @@ the text is addressed to the model.
 | the full `PromptOneGuardrail` screening rule | 0.76   | 0.29 |
 
 Reproduce the table with the case file attached to
-[#781](https://github.com/NandhaKishorM/promptone/issues/781):
+[#781](https://github.com/prompttechies-del/promptone/issues/781):
 
 ```python
 import json, promptone
@@ -101,5 +101,5 @@ Two consequences a deployer can act on today:
 
 The scope question — whether indirect, embedded injection is intended to be inside the guard
 presets' coverage — is open on
-[#781](https://github.com/NandhaKishorM/promptone/issues/781). Until it is answered, document-shaped
+[#781](https://github.com/prompttechies-del/promptone/issues/781). Until it is answered, document-shaped
 input should be treated as outside the presets' demonstrated coverage.

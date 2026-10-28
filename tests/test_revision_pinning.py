@@ -72,7 +72,7 @@ class ResolveRevisionTests(unittest.TestCase):
     def test_reviewed_finds_the_pin_whatever_case_the_repo_is_spelled_in(self):
         """Hugging Face resolves repo ids case-insensitively, so the pin lookup must too.
 
-        `promptone.load("ConvaiInnovations/PromptOne")` under `PROMPTONE_REVISION=reviewed` is the same
+        `promptone.load("Zameer1/PromptOne")` under `PROMPTONE_REVISION=reviewed` is the same
         repository as the table's lowercase key. An exact-match lookup called it unpinned and
         refused the load -- reporting a missing reviewed SHA for one that exists, the
         opposite of what this control is for.

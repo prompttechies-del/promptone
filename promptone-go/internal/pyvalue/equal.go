@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/pyjson"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/pyjson"
 )
 
 // Equal is Python's == on decoded JSON values: True == 1 == 1.0 (numbers compare by exact value,

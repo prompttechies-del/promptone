@@ -20,8 +20,8 @@ classifiers = [
 ]
 
 [project.urls]
-Repository = "https://github.com/NandhaKishorM/promptone"
-Issues = "https://github.com/NandhaKishorM/promptone/issues"
+Repository = "https://github.com/prompttechies-del/promptone"
+Issues = "https://github.com/prompttechies-del/promptone/issues"
 
 [tool.setuptools.packages.find]
 where = ["src"]

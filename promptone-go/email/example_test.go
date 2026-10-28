@@ -3,7 +3,7 @@ package email_test
 import (
 	"fmt"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/email"
+	"github.com/prompttechies-del/promptone/promptone-go/email"
 )
 
 func ExampleCleanBody() {

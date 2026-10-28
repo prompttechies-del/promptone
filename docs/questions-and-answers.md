@@ -83,7 +83,7 @@ exactly the keys `false` and `true`, and the polarity is unchanged: `noul` is st
 Labels move the answer, in both directions. `noul` follows its own option labels, most strongly
 on the English checkpoint, so a label pair that reads as a decision ("approve" / "reject") can
 pull the answer toward the label rather than the state. That same pull is the one workaround for
-the wordings in [#1244](https://github.com/NandhaKishorM/promptone/issues/1244) that answer without
+the wordings in [#1244](https://github.com/prompttechies-del/promptone/issues/1244) that answer without
 reading the state at all: naming the two options restores the question, where rewording it does
 not reliably. So labels are worth reaching for when an answer ignores the state, and worth
 suspecting when an answer tracks the label. Validate any relabelling on your own data either way.
@@ -136,7 +136,7 @@ calibrated as shipped**: the property usually attributed to it — that of the a
 confidence *c*, about *c* of them are right — holds only once temperatures have been fitted and
 validated on **held-out data for your checkpoint at your option count**. The shipped checkpoints
 are over-confident and how far depends on the option count, so an untuned threshold can select
-below the model's own accuracy ([#394](https://github.com/NandhaKishorM/promptone/issues/394)).
+below the model's own accuracy ([#394](https://github.com/prompttechies-del/promptone/issues/394)).
 
 ```python
 # THRESHOLD is a number you measured on your own held-out data, not one the model ships.
@@ -168,7 +168,7 @@ type so the choice is explicit rather than implied.
 **A threshold is a policy, not a property of the model.** Both checkpoints ship over-confident,
 and how over-confident depends on the option count, so a number measured on a 3-option question
 does not transfer to a 20-option one. Measure it on your own data; the Calibration section of
-[`BENCHMARKS.md`](https://github.com/NandhaKishorM/promptone/blob/main/BENCHMARKS.md) has the fitting
+[`BENCHMARKS.md`](https://github.com/prompttechies-del/promptone/blob/main/BENCHMARKS.md) has the fitting
 loop and the fitted values.
 
 ### `action` and `act_probability`
@@ -242,15 +242,15 @@ That mirrors what the library does for a `choice` question written as a list of 
 
 - **Confidence is not a correctness guarantee at high option counts.** On a 20-option question the
   distributions for right and wrong answers overlap heavily, and a threshold can end up selecting
-  *below* the model's own accuracy. See [#394](https://github.com/NandhaKishorM/promptone/issues/394).
+  *below* the model's own accuracy. See [#394](https://github.com/prompttechies-del/promptone/issues/394).
 - **Negation is not reliably handled in forced-choice questions.** A cancellation question can
   return the cancellation label for a state that says *not* to cancel, with high confidence, on
-  both checkpoints. See [#377](https://github.com/NandhaKishorM/promptone/issues/377).
+  both checkpoints. See [#377](https://github.com/prompttechies-del/promptone/issues/377).
 - **`noul` can follow its labels rather than the state**, so validate any relabelling.
 - **A `noul` instruction asking whether something is "positive" can answer no for every state**,
   at confidence 1.0, on both PyTorch checkpoints. Setting `labels` to the two words restores it;
   capitalising the word helps in some wordings and not in others. See
-  [#1244](https://github.com/NandhaKishorM/promptone/issues/1244).
+  [#1244](https://github.com/prompttechies-del/promptone/issues/1244).
 - **More options is not free.** Past roughly 20 the model degrades quickly; use the shortlist
   helper to reduce a large label space before asking, or split it into a coarse and a fine
   question.

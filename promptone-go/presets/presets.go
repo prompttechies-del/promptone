@@ -1,8 +1,8 @@
 package presets
 
 import (
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/unicodedata"
-	"github.com/NandhaKishorM/promptone/promptone-go/schema"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/unicodedata"
+	"github.com/prompttechies-del/promptone/promptone-go/schema"
 )
 
 // Named is one preset with the name promptone.presets gives its function.

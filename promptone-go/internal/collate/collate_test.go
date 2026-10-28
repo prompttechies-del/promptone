@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/schema"
+	"github.com/prompttechies-del/promptone/promptone-go/schema"
 )
 
 func TestCollate(t *testing.T) {

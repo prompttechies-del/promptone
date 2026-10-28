@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"slices"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/unicodedata"
-	"github.com/NandhaKishorM/promptone/promptone-go/lang"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/unicodedata"
+	"github.com/prompttechies-del/promptone/promptone-go/lang"
 )
 
 type stateConfig struct {

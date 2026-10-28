@@ -39,7 +39,7 @@ ARG MODELSCOPE_MODEL=""
 ARG MODELSCOPE_REVISION="master"
 
 LABEL org.opencontainers.image.title="PromptOne Docker quickstart" \
-      org.opencontainers.image.source="https://github.com/NandhaKishorM/promptone" \
+      org.opencontainers.image.source="https://github.com/prompttechies-del/promptone" \
       org.opencontainers.image.licenses="Apache-2.0"
 
 # torch 2.14 swaps some eager CUDA ops (bmm, topk, sum, norms) for Triton kernels that it

@@ -5,8 +5,8 @@ import (
 	"testing"
 	"unicode"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/fixtures"
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/goldens"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/fixtures"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/goldens"
 )
 
 // Every case below was answered by promptone/email.py: the cleaned bodies, the budgets, and the

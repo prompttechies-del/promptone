@@ -12,8 +12,8 @@ a stable tool interface. Both use PromptOne's `Router` to select a checkpoint an
 `choice`, `score`, and `noul` decisions; neither is an open-ended question-answering or text
 generation interface.
 
-For the routing decision and typed-question examples, see the README's [Route Mode quickstart](https://github.com/NandhaKishorM/promptone#quickstart-route-mode-recommended).
-For confidence and built-in workflows, see the README's [confidence gating](https://github.com/NandhaKishorM/promptone#automated-confidence-gating) and [workflow presets](https://github.com/NandhaKishorM/promptone#built-in-workflow-presets).
+For the routing decision and typed-question examples, see the README's [Route Mode quickstart](https://github.com/prompttechies-del/promptone#quickstart-route-mode-recommended).
+For confidence and built-in workflows, see the README's [confidence gating](https://github.com/prompttechies-del/promptone#automated-confidence-gating) and [workflow presets](https://github.com/prompttechies-del/promptone#built-in-workflow-presets).
 
 ## 1. Command line
 

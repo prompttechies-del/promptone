@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/agent"
+	"github.com/prompttechies-del/promptone/promptone-go/agent"
 )
 
 func TestDigestsFromEnv(t *testing.T) {

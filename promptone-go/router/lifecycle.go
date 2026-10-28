@@ -19,7 +19,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/agent"
+	"github.com/prompttechies-del/promptone/promptone-go/agent"
 )
 
 // DefaultMaxLoaded is how many checkpoints a Router keeps resident unless WithMaxLoaded says

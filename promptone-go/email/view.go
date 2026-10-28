@@ -4,7 +4,7 @@ import (
 	"strings"
 	"unicode"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/unicodedata"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/unicodedata"
 )
 
 // fold is the relation re.I applies to a str pattern: simple lowercase, plus the two

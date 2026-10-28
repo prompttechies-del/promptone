@@ -48,7 +48,7 @@ fault is not raised to Python, so that fallback cannot help here.
 Measured on this project's own Windows CI, where the bf16 autocast forward in
 `tests/test_runtime_fixes.py` faulted on roughly three runs in thirty-five, on one runner label,
 because a hosted fleet is not one CPU model. The same class of failure is
-[#1065](https://github.com/NandhaKishorM/promptone/issues/1065) below.
+[#1065](https://github.com/prompttechies-del/promptone/issues/1065) below.
 
 So check the host before setting it, and check it where the server will run rather than where you
 develop:
@@ -80,7 +80,7 @@ faulting host costs three skipped checks rather than the suite.
 The quantized export above is the int8 path `ONNXAgent` loads. `torch.ao.quantization.quantize_dynamic`
 on a live `Agent` is a different operation.
 
-[Issue #1065](https://github.com/NandhaKishorM/promptone/issues/1065) reports that the default fbgemm
+[Issue #1065](https://github.com/prompttechies-del/promptone/issues/1065) reports that the default fbgemm
 engine crashes with SIGILL (illegal instruction) on a CPU with SSE4.2 and no AVX2 (promptone 0.3.22,
 torch 2.14). Check the CPU first. `torch.backends.cpu.get_cpu_capability()` returns `"NO AVX"`
 when AVX2 is unavailable, and `"AVX2"` or `"AVX512"` when it is. On Linux,

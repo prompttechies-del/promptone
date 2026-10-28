@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/collate"
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/decode"
-	"github.com/NandhaKishorM/promptone/promptone-go/schema"
-	"github.com/NandhaKishorM/promptone/promptone-go/sequence"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/collate"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/decode"
+	"github.com/prompttechies-del/promptone/promptone-go/schema"
+	"github.com/prompttechies-del/promptone/promptone-go/sequence"
 )
 
 // RunError reports a failed model run: the session's error, an output that does not fit the

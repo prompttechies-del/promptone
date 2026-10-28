@@ -9,11 +9,11 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/agent"
-	"github.com/NandhaKishorM/promptone/promptone-go/lang"
-	"github.com/NandhaKishorM/promptone/promptone-go/onnx"
-	"github.com/NandhaKishorM/promptone/promptone-go/presets"
-	"github.com/NandhaKishorM/promptone/promptone-go/samples/internal/gateway"
+	"github.com/prompttechies-del/promptone/promptone-go/agent"
+	"github.com/prompttechies-del/promptone/promptone-go/lang"
+	"github.com/prompttechies-del/promptone/promptone-go/onnx"
+	"github.com/prompttechies-del/promptone/promptone-go/presets"
+	"github.com/prompttechies-del/promptone/promptone-go/samples/internal/gateway"
 )
 
 func main() {

@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to the `com.convaiinnovations:promptone-java` artifact are documented here. The
+All notable changes to the `com.prompttechies:promptone-java` artifact are documented here. The
 format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the project uses
 [Semantic Versioning](https://semver.org/). Releases are tagged `promptone-java-v<version>`.
 
@@ -271,4 +271,4 @@ Recorded here because each one was a defect first and a lesson second.
   put in a `finally`, and the hook's failure is attached with `addSuppressed` where the
   reference chains it onto `__context__`.
 
-[0.1.0]: https://github.com/NandhaKishorM/promptone
+[0.1.0]: https://github.com/prompttechies-del/promptone

@@ -6,10 +6,10 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/fixtures"
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/goldens"
-	"github.com/NandhaKishorM/promptone/promptone-go/router"
-	"github.com/NandhaKishorM/promptone/promptone-go/schema"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/fixtures"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/goldens"
+	"github.com/prompttechies-del/promptone/promptone-go/router"
+	"github.com/prompttechies-del/promptone/promptone-go/schema"
 )
 
 func family(t *testing.T, key string) []any {

@@ -3,7 +3,7 @@ package agent
 import (
 	"testing"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/schema"
+	"github.com/prompttechies-del/promptone/promptone-go/schema"
 )
 
 func TestMergeCollapsedLaterWindowReplaces(t *testing.T) {

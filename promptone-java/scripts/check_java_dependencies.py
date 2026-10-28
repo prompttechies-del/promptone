@@ -3,7 +3,7 @@
 
 `security.yml` audits the Python dependencies with pip-audit and nothing audited the Java tree at
 all, which is the wrong way round for the one artifact in this repository that gets published to
-Maven Central: a consumer who adds `com.convaiinnovations:promptone-java` inherits its compile and
+Maven Central: a consumer who adds `com.prompttechies:promptone-java` inherits its compile and
 runtime dependencies, and a version burned on Central cannot be withdrawn.
 
 Reads Gradle's dependency-tree output on stdin and extracts the resolved coordinates, so

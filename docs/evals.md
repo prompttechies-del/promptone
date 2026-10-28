@@ -135,7 +135,7 @@ teacher generations. An interval containing zero does not establish equivalence.
 Inspect slices and individual decisions for label skew, and use labelled evals
 for correctness or calibration claims.
 
-[`examples/evals/teacher_agreement.py`](https://github.com/NandhaKishorM/promptone/blob/main/examples/evals/teacher_agreement.py)
+[`examples/evals/teacher_agreement.py`](https://github.com/prompttechies-del/promptone/blob/main/examples/evals/teacher_agreement.py)
 replays two published teacher observations from a pinned public dataset against
 a local PromptOne checkpoint, saving the three runs and their report. Its small fixed
 sample demonstrates the workflow, not deployment readiness.
@@ -180,7 +180,7 @@ latency includes embedding and the decision call; the report does not isolate
 stage timings. With `k >= n`, the original question passes through and retrieval
 recall is 1 without calling the embedder.
 
-This does not reproduce the BANKING77 results in [issue #102](https://github.com/NandhaKishorM/promptone/issues/102):
+This does not reproduce the BANKING77 results in [issue #102](https://github.com/prompttechies-del/promptone/issues/102):
 those numbers depend on its dataset, checkpoint and bi-encoder. This API makes the
 same kind of diagnosis repeatable on a caller's own labelled set.
 
@@ -322,7 +322,7 @@ Every row above that takes a confidence (`ece`, `brier`, `aurc`, both `selective
 `answer["answer_confidence"]` -- the probability of the answer being reported, the quantity temperature
 scaling fits. It is not a claim that the number is right as shipped: both base checkpoints are
 over-confident and `promptone-multilingual` ships no fitted temperatures at all -- see the README's
-[Calibration](https://github.com/NandhaKishorM/promptone#calibration) -- which is what `ece` measures
+[Calibration](https://github.com/prompttechies-del/promptone#calibration) -- which is what `ece` measures
 rather than assumes.
 
 An answer that carries no `answer_confidence` falls through, in order, to `confidence`, then

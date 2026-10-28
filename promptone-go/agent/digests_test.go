@@ -9,7 +9,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/agent"
+	"github.com/prompttechies-del/promptone/promptone-go/agent"
 )
 
 func withTemps(t *testing.T, langs map[string]map[string]any, tag string) string {

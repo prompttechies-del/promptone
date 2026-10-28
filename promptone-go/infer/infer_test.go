@@ -6,9 +6,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/infer"
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/collate"
-	"github.com/NandhaKishorM/promptone/promptone-go/schema"
+	"github.com/prompttechies-del/promptone/promptone-go/infer"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/collate"
+	"github.com/prompttechies-del/promptone/promptone-go/schema"
 )
 
 func batch(rows, length, markers int) infer.Batch {

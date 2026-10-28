@@ -10,11 +10,11 @@
 //
 // See samples/README.md for the classpath, which is the only fiddly part.
 
-import com.convaiinnovations.promptone.Agent;
-import com.convaiinnovations.promptone.Answer;
-import com.convaiinnovations.promptone.Prediction;
-import com.convaiinnovations.promptone.Presets;
-import com.convaiinnovations.promptone.Question;
+import com.prompttechies.promptone.Agent;
+import com.prompttechies.promptone.Answer;
+import com.prompttechies.promptone.Prediction;
+import com.prompttechies.promptone.Presets;
+import com.prompttechies.promptone.Question;
 import java.nio.file.Path;
 import java.util.LinkedHashMap;
 import java.util.Map;

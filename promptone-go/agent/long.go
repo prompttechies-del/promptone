@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"slices"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/schema"
-	"github.com/NandhaKishorM/promptone/promptone-go/sequence"
-	"github.com/NandhaKishorM/promptone/promptone-go/tokenizer"
+	"github.com/prompttechies-del/promptone/promptone-go/schema"
+	"github.com/prompttechies-del/promptone/promptone-go/sequence"
+	"github.com/prompttechies-del/promptone/promptone-go/tokenizer"
 )
 
 // WithWindow sets the state tokens per window of a PredictLong scan; 0 or less means the room

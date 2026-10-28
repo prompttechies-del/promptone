@@ -4,7 +4,7 @@ name: Release Java (promptone-java)
 # matches the tag, builds the jars and publishes them to Maven Central.
 #
 # SET UP ONCE, and only the project owner can do it -- none of this is in the repository:
-#   1. Verify the `com.convaiinnovations` namespace at https://central.sonatype.com. Maven Central
+#   1. Verify the `com.prompttechies` namespace at https://central.sonatype.com. Maven Central
 #      will not accept a groupId whose domain or GitHub org has not been proven.
 #   2. Create a Central portal user token and add it as MAVEN_CENTRAL_USERNAME and
 #      MAVEN_CENTRAL_PASSWORD in the repository secrets.
@@ -91,7 +91,7 @@ jobs:
       - name: Install to the local repository, and show what a consumer would get
         run: |
           ./gradlew --no-daemon publishToMavenLocal
-          find ~/.m2/repository/com/convaiinnovations -type f | sort
+          find ~/.m2/repository/com/prompttechies -type f | sort
           cat ~/.m2/repository/com/zameer1/promptone-java/*/promptone-java-*.pom
 
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2

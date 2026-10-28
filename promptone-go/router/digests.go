@@ -12,9 +12,9 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/digest"
-	"github.com/NandhaKishorM/promptone/promptone-go/internal/unicodedata"
-	"github.com/NandhaKishorM/promptone/promptone-go/lang"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/digest"
+	"github.com/prompttechies-del/promptone/promptone-go/internal/unicodedata"
+	"github.com/prompttechies-del/promptone/promptone-go/lang"
 )
 
 // WithSHA256Digests pins checkpoints to the SHA-256 of their files, one map of slash path -> hex

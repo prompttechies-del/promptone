@@ -14,7 +14,7 @@ subprojects {
     apply(plugin = "maven-publish")
     apply(plugin = "signing")
 
-    group = "com.convaiinnovations"
+    group = "com.prompttechies"
     version = providers.gradleProperty("promptoneJavaVersion").getOrElse("0.1.0-SNAPSHOT")
 
     repositories { mavenCentral() }
@@ -136,7 +136,7 @@ subprojects {
             // maintainer who prefers the portal's own plugin can swap this block out; nothing else
             // in the build depends on it.
             //
-            // NOT EXERCISED. Publishing needs a verified `com.convaiinnovations` namespace, a
+            // NOT EXERCISED. Publishing needs a verified `com.prompttechies` namespace, a
             // Central token and a PGP key, all of which belong to the project owner, so this
             // configuration is written from Central's documented requirements and has never been
             // run. `publishToMavenLocal` is the part that is tested.
@@ -164,7 +164,7 @@ subprojects {
                                 "typed answers."
                         }
                     )
-                    url.set("https://github.com/NandhaKishorM/promptone")
+                    url.set("https://github.com/prompttechies-del/promptone")
                     licenses {
                         license {
                             name.set("Apache-2.0")
@@ -178,9 +178,9 @@ subprojects {
                         }
                     }
                     scm {
-                        url.set("https://github.com/NandhaKishorM/promptone")
-                        connection.set("scm:git:https://github.com/NandhaKishorM/promptone.git")
-                        developerConnection.set("scm:git:ssh://git@github.com/NandhaKishorM/promptone.git")
+                        url.set("https://github.com/prompttechies-del/promptone")
+                        connection.set("scm:git:https://github.com/prompttechies-del/promptone.git")
+                        developerConnection.set("scm:git:ssh://git@github.com/prompttechies-del/promptone.git")
                     }
                 }
             }
