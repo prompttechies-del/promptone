@@ -989,7 +989,7 @@ def test_path_or_unpublished_hub_id_is_refused_on_both_endpoints(monkeypatch):
     """
     from fastapi import HTTPException
 
-    passthrough = ("jev-1", "JEV-1", "zameer1/promptone", "Convaiinnovations/PromptOne",
+    passthrough = ("jev-1", "JEV-1", "zameer1/promptone", "Zameer1/PromptOne",
                    "  zameer1/promptone  ", "not-a-checkpoint", None, "")
     for kept in passthrough:
         assert _resolve_model(kept) is None, kept
@@ -4378,3 +4378,43 @@ def test_a_body_delivered_in_time_still_answers(monkeypatch):
     status, payload = asyncio.run(_asgi_post(app, "/v1/systemone", _ASGI_BODY))
     assert status == 200
     assert json.loads(payload)["usage"]["input_tokens"] == 42
+
+
+# --- browser playground at /ui and opt-in CORS ---
+
+def test_ui_served_same_origin(monkeypatch):
+    monkeypatch.delenv("PROMPTONE_UI", raising=False)
+    client, _ = _client(monkeypatch)
+    assert client.get("/ui", follow_redirects=False).headers["location"].endswith("/ui/")
+    r = client.get("/ui/")
+    assert r.status_code == 200 and "text/html" in r.headers["content-type"]
+    assert "PromptOne Playground" in r.text
+    assert client.get("/ui/promptone-logo.webp").headers["content-type"] == "image/webp"
+    assert client.get("/", follow_redirects=False).status_code in (302, 307)
+    # only the two known files are reachable, never an arbitrary path
+    assert client.get("/ui/..%2Fserve.py").status_code == 404
+    assert client.get("/ui/serve.py").status_code == 404
+
+
+def test_ui_can_be_disabled(monkeypatch):
+    monkeypatch.setenv("PROMPTONE_UI", "0")
+    client, _ = _client(monkeypatch)
+    assert client.get("/ui/").status_code == 404
+
+
+def test_cors_off_by_default_and_opt_in(monkeypatch):
+    monkeypatch.delenv("PROMPTONE_CORS_ORIGINS", raising=False)
+    client, _ = _client(monkeypatch)
+    r = client.get("/health", headers={"Origin": "https://example.com"})
+    assert "access-control-allow-origin" not in r.headers
+    monkeypatch.setenv("PROMPTONE_CORS_ORIGINS", "https://example.com")
+    client, _ = _client(monkeypatch)
+    r = client.get("/health", headers={"Origin": "https://example.com"})
+    assert r.headers.get("access-control-allow-origin") == "https://example.com"
+
+
+def test_site_playground_matches_packaged_ui():
+    with open(os.path.join(ROOT, "promptone", "ui", "index.html"), encoding="utf-8") as f:
+        packaged = f.read()
+    with open(os.path.join(ROOT, "site", "playground.html"), encoding="utf-8") as f:
+        assert f.read() == packaged, "copy promptone/ui/index.html to site/playground.html"

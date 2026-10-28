@@ -36,6 +36,10 @@ dependencies = [
 # assets/, research/ and notebooks/ sit in the root, so auto-discovery bails out.
 packages = ["promptone", "promptone.backends", "promptone.mcp", "promptone.integrations"]
 
+[tool.setuptools.package-data]
+# the browser playground promptone-serve hosts at /ui
+promptone = ["ui/*.html", "ui/*.webp"]
+
 [project.optional-dependencies]
 # `pip install promptone[serve]` adds the HTTP server (promptone.serve / the promptone-serve CLI).
 serve = [

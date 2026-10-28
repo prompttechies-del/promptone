@@ -468,3 +468,12 @@ section -- and every check above applies to it as it does to `POST /v1/systemone
 `400`s, the same unpaired-surrogate refusal, the same auth, admission, size limits, body-control
 validation and `500` mapping. The `promptone` CLI and MCP server cover local use -- see the
 [README](https://github.com/NandhaKishorM/promptone#readme).
+
+## Browser playground
+
+`promptone-serve` also hosts a playground at `http://localhost:8000/ui/` (and `/` redirects there).
+It calls `/v1/systemone` on the same server, so it needs no extra setup; if the server sets
+`PROMPTONE_API_KEY`, type the key under **Server** in the page. Set `PROMPTONE_UI=0` to turn it off.
+
+To call the server from a page on another origin, list that origin in `PROMPTONE_CORS_ORIGINS`
+(comma separated). CORS is off when the variable is unset.

@@ -81,6 +81,7 @@ import os
 import re
 import time
 from contextlib import asynccontextmanager
+from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 # A failed inference is reported to the client as a fixed 500 so nothing about paths,
@@ -1341,6 +1342,30 @@ def create_app(router: Optional[Any] = None):
     def _check_auth(authorization: Optional[str]) -> None:
         if not _authorized(authorization):
             raise HTTPException(status_code=401, detail="invalid or missing bearer token")
+
+    # The browser playground, served same-origin so it needs no CORS. Static files only:
+    # the page calls /v1/systemone like any other client, with whatever key the user types.
+    # PROMPTONE_UI=0 turns it off.
+    if _env_bool("PROMPTONE_UI", True):
+        from fastapi.responses import FileResponse, RedirectResponse
+        ui_dir = Path(__file__).resolve().parent / "ui"
+        ui_files = {"": ("index.html", "text/html; charset=utf-8"),
+                    "promptone-logo.webp": ("promptone-logo.webp", "image/webp")}
+
+        # The page loads its logo by relative path, so it must be served at /ui/ (with the slash).
+        @app.get("/", include_in_schema=False)
+        @app.get("/ui", include_in_schema=False)
+        def ui_root():
+            return RedirectResponse(url=app.root_path.rstrip("/") + "/ui/")
+
+        @app.get("/ui/", include_in_schema=False)
+        @app.get("/ui/{name}", include_in_schema=False)
+        def ui_file(name: str = ""):
+            entry = ui_files.get(name)
+            if entry is None or not (ui_dir / entry[0]).is_file():
+                raise HTTPException(status_code=404, detail="not found")
+            return FileResponse(ui_dir / entry[0], media_type=entry[1],
+                                headers={"Cache-Control": "no-cache"})
 
     @app.get("/health")
     def health(authorization: Optional[str] = Header(default=None)) -> Dict[str, Any]:
